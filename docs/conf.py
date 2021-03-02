@@ -68,7 +68,7 @@ html_static_path = ["_static"]
 
 html_context = {
     "display_github": True,
-    "github_host": "wwwin-github.cisco.com",
+    "github_host": "https://github.com/",
     "github_user": "userlerueda",
     "github_repo": "HOLPRG-2002",
     "github_version": "master/docs/",
