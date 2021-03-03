@@ -2,39 +2,17 @@
 
 # Network Programability Lab (HOLPRG-2002)
 
-An introduction paragraph must contain a brief description of Hands-on Lab (all acronyms should be spelled out completely).
+This repository contains the required source code to build the documentation for HOLPRG-2002 Cisco Live 2021 session.
 
-It should include:
+# Lab Guide
 
-- One or two sentences describing what problem the tool solves
-- Who should be using it?
-- Where is it run?
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-See deployment section below for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Usage
-
-Add instructions on how to use this tool
+To access the lab guide go [here](https://userlerueda.github.io/HOLPRG-2002/)
 
 ## Authors
 
-- Luis Rueda
 - Jairo Leon
+- Luis Rueda
+- Ovesnel Mas Lara
 
 ## License
 
@@ -42,6 +20,4 @@ This project is covered under the terms described in [LICENSE](./LICENSE)
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Global Cisco Live events
