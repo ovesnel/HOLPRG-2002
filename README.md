@@ -1,3 +1,5 @@
+[![CI](https://github.com/userlerueda/HOLPRG-2002/actions/workflows/main.yml/badge.svg)](https://github.com/userlerueda/HOLPRG-2002/actions/workflows/main.yml)
+
 # Network Programability Lab (HOLPRG-2002)
 
 An introduction paragraph must contain a brief description of Hands-on Lab (all acronyms should be spelled out completely).
