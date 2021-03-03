@@ -1,6 +1,6 @@
-########################################
-Lab Access and Pre-Hands-on Lab Exercise
-########################################
+##########
+Lab Access
+##########
 
 In this lab, you will have access to one (1) Linux VM. The Linux VM .....
 
@@ -9,8 +9,8 @@ In this lab, you will have access to one (1) Linux VM. The Linux VM .....
     :width: 25%
     :align: center
 
-Lab IP Addressing and Access Information
-========================================
+IP Addressing and Access Information
+====================================
 
 .. csv-table::
    :file: ./reference/devices-info.csv
@@ -18,8 +18,8 @@ Lab IP Addressing and Access Information
    :header-rows: 1
 
 
-Log into the Remote Lab
-=======================
+Connecting to the Lab
+=====================
 
 
 
