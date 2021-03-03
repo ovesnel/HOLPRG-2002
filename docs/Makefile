@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 SPHINXOPTS    ?= -W
 SPHINXBUILD   ?= sphinx-build
-SOURCEDIR     = docs
+SOURCEDIR     = ./
 BUILDDIR      = build
 DOCKER_COMPOSE_FILES = -f docker-compose.yml
 BACKUP_NAME = backup-production-latest.tar.gz
