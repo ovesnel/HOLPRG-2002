@@ -1,8 +1,8 @@
-#######
-Task #1
-#######
+######################################
+Task #1: Setup Development Environment
+######################################
 
-.. Next Table of Content is an example, please change the names according to your needs 
+
 
 .. toctree::
 

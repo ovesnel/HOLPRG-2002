@@ -1,12 +1,12 @@
-Step #3
-#######
+Step #3: Visualize Information from CSV
+#######################################
 
-Title1
-------
-
-
-Title2
-------
+List all the information using ``CSV`` file as a source 
 
 
-.. sectionauthor:: First Last <cec@cisco.com>
+Sub-Title
+---------
+
+
+
+.. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

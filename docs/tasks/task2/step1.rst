@@ -1,12 +1,16 @@
-Step #1
-#######
+Step #1: Create CSV File
+########################
 
-Title1
-------
+Create a CSV file with the information that we want to read, use following as example:
+
+.. csv-table::
+   :file: ./reference/interfaces.csv
+   :width: 80%
+   :header-rows: 1
 
 
-Title2
-------
+Sub-Title
+---------
 
 
-.. sectionauthor:: First Last <cec@cisco.com>
+.. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

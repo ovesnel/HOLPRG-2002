@@ -1,12 +1,10 @@
 Step #3
 #######
 
-Title1
-------
+Sub-Title
+---------
 
 
-Title2
-------
 
 
-.. sectionauthor:: First Last <cec@cisco.com>
+.. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
