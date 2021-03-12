@@ -1,8 +1,8 @@
-#######
-Task #2
-#######
+#############################
+Task #2: Integration with API
+#############################
 
-.. Next Table of Content is an example, please change the names according to your needs 
+
 
 .. toctree::
 
