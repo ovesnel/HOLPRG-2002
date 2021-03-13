@@ -6,14 +6,17 @@ This document is intended for use by attendees of the Cisco Live 2021 who are ta
 
 Upon completion of this lab, you wiil be able to:
 
-- topic 1
-- topic 2
-- others
+- Understand and install elements or components needed to develop a self service portal.
+- Write and run scripts to create a self service portal.
+- Use Angular ????
+- Get familiar with ???
+- Learn how a service portal can inteface with devices to configure non-complex service.
 
 Prerequisites
 =============
 
-- one
-- two
-- three
-
+- Understand APIs, NETCONF and RESTCONF concepts. 
+- Basic programability experience 
+- Basic Linux commands
+- Basic GitHub experience 
+- Have cisco any connect installed ???

@@ -1,17 +1,23 @@
-##########################
-Network Programability Lab
-##########################
+########################################
+Network Programability Lab (HOLPRG-2002)
+########################################
 
-Welcome to Cisco Live !
-=======================
+.. image:: images/cl-turn-it-up.png
+   :align: center
+
+Speakers
+========
+
+- Jairo Leon
+- Luis Rueda
+- Ovesnel Mas Lara
+   
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :caption: Table of Contents
 
    introduction/index
    labaccess/index
-   section1/index
-   section2/index
-   section3/index
+   tasks/index
    conclusions
