@@ -24,4 +24,16 @@ test-local-docs:
 
 .PHONY: show-local-docs
 show-local-docs:
-	docker run -it --rm -p 8000:8000 -v `PWD`:/repo containers.cisco.com/aide/sphinx-tools cicd.sh
+	docker run -it --rm -p 8000:8000 -w /repo -v `PWD`:/repo \
+		-e SOURCEDIR=$(SOURCEDIR) \
+		-e BUILDDIR=$(BUILDDIR) \
+		containers.cisco.com/aide/sphinx-tools \
+		/bin/bash -c "sphinx-autobuild $(SOURCEDIR) $(BUILDDIR)/html --host 0.0.0.0"
+
+# .PHONY: show-local-docs
+# show-local-docs:
+# 	docker run -it --rm -p 8000:8000 -w /repo -v `PWD`:/repo \
+# 		-e SOURCEDIR=$(SOURCEDIR) \
+# 		-e BUILDDIR=$(BUILDDIR) \
+# 		containers.cisco.com/aide/sphinx-tools \
+# 		cicd.sh
