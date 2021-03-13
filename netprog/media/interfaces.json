@@ -1,0 +1,53 @@
+{
+    "Cisco-IOS-XE-native:interface": {
+        "GigabitEthernet": [
+            {
+                "name": "1",
+                "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+                "ip": {
+                    "address": {
+                        "primary": {
+                            "address": "10.10.20.48",
+                            "mask": "255.255.255.0"
+                        }
+                    }
+                },
+                "mop": {
+                    "enabled": false,
+                    "sysid": false
+                },
+                "Cisco-IOS-XE-ethernet:negotiation": {
+                    "auto": true
+                }
+            },
+            {
+                "name": "2",
+                "description": "Network Interface",
+                "shutdown": [
+                    null
+                ],
+                "mop": {
+                    "enabled": false,
+                    "sysid": false
+                },
+                "Cisco-IOS-XE-ethernet:negotiation": {
+                    "auto": true
+                }
+            },
+            {
+                "name": "3",
+                "description": "Network Interface",
+                "shutdown": [
+                    null
+                ],
+                "mop": {
+                    "enabled": false,
+                    "sysid": false
+                },
+                "Cisco-IOS-XE-ethernet:negotiation": {
+                    "auto": true
+                }
+            }
+        ]
+    }
+}
