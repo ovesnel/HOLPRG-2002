@@ -33,6 +33,7 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.graphviz",
     "sphinx.ext.autodoc",
+    "sphinx_copybutton",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
