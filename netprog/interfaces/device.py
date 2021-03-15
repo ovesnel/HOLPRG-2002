@@ -14,7 +14,7 @@ def convert_interface_object(interface_object):
             interfaces.append(
                 {
                     "name": f"{interface_type}{interface_details['name']}",
-                    "description": interface_details["description"],
+                    "description": interface_details.get("description", ""),
                     "shutdown": shutdown,
                 }
             )
