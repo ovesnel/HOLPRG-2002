@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "a1672ace-828a-4222-827e-2169174d4a13",
+		"name": "CL2021-HOLPRG-2002",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Interfaces",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json"
+					}
+				],
+				"url": {
+					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/interface/",
+					"protocol": "https",
+					"host": [
+						"198",
+						"18",
+						"134",
+						"11"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"interface",
+						""
+					]
+				},
+				"description": "This reads a single interface from the IOS XE box which already has been configured as a 802.1Q subinterface\nIt uses the native device model (e.g. NED, network element driver)"
+			},
+			"response": []
+		},
+		{
+			"name": "Hostname",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json"
+					}
+				],
+				"url": {
+					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/hostname",
+					"protocol": "https",
+					"host": [
+						"198",
+						"18",
+						"134",
+						"11"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"hostname"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Interface",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json"
+					}
+				],
+				"url": {
+					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=1",
+					"protocol": "https",
+					"host": [
+						"198",
+						"18",
+						"134",
+						"11"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"interface",
+						"GigabitEthernet=1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set hostname",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cm9vdDpEX1ZheSFfMTAm"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"hostname\": \"ABC123\"}"
+				},
+				"url": {
+					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/hostname",
+					"protocol": "https",
+					"host": [
+						"198",
+						"18",
+						"134",
+						"11"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"hostname"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "cisco",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "cisco",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "ios-xe-mgmt.cisco.com"
+		},
+		{
+			"key": "port",
+			"value": "9443"
+		}
+	]
+}
