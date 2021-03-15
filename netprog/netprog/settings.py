@@ -120,6 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 DEVICE_HOST = os.getenv("DEVICE_HOST")
 DEVICE_USER = os.getenv("DEVICE_USER")
