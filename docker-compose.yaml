@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context: ./netprog
+    image: holprg2002
+    volumes:
+      - ./netprog:/app
+    environment:
+      - DEVICE_USER=cisco
+      - DEVICE_PASS=cisco
+    ports:
+      - "8080:80"
+    command: python manage.py runserver 0.0.0.0:80
