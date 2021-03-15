@@ -28,7 +28,11 @@ def get_interfaces(hostname, username, password):
     headers = headers = {"Accept": "application/yang-data+json"}
     try:
         response = requests.request(
-            "GET", url, headers=headers, auth=HTTPBasicAuth(username, password)
+            "GET",
+            url,
+            headers=headers,
+            auth=HTTPBasicAuth(username, password),
+            verify=False,
         )
 
         if response.ok:
