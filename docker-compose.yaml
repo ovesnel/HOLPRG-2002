@@ -8,8 +8,9 @@ services:
     volumes:
       - ./netprog:/app
     environment:
-      - DEVICE_USER=cisco
-      - DEVICE_PASS=cisco
+      - DEVICE_HOST=${DEVICE_HOST}
+      - DEVICE_USER=${DEVICE_USER}
+      - DEVICE_PASS=${DEVICE_PASS}
     ports:
-      - "8080:80"
+      - "80:80"
     command: python manage.py runserver 0.0.0.0:80
