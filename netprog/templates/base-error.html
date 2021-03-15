@@ -1,0 +1,57 @@
+{% load static %}
+{% spaceless %}
+<!DOCTYPE html>
+<html lang="en">
+    {% include 'head.html' %}
+    <body class="cui cui--compressed">
+        <div class="content-fluid">
+                <main>
+                    <header id="styleguideHeader" class="header">
+                        <div class="header-bar container">
+                            <a href="{% url 'home' %}" class="header-bar__logo">
+                                <span class="icon-cisco"></span>
+                            </a>
+                            <div class="header-bar__main">
+                                <div class="header-heading">
+                                    <h1 class="page-title">L3 Reachability Tester</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="container">
+                            <div class="panel half-margin-top half-margin-bottom">
+                                <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col-md-8">
+                                        {% include 'messages.html' %}                       
+                                        {% block main %}{% endblock main %}
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modals -->
+                    <!-- <button class="btn btn--secondary" id="modal-small-open">Small Modal</button> -->
+                    <div class="modal-backdrop hide"></div>
+                    <div class="modal modal--small hide" id="modal-small" style="width: auto !important; height: auto; display: inline-block; padding-top: 15%;">
+                        <div class="modal__dialog">
+                            <div class="modal__content">
+                                <div class="modal__body">
+                                   <p class="subtitle">This is a small width modal</p>
+                                </div>
+                                <div class="modal__footer">
+                                    <button class="btn" id="modal-small-close">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include 'footer.html' %} 
+                </main>
+        </div>
+        <!-- Copyright Cisco 2018-2019 - Author: Ovesnel Mas Lara (omaslara@cisco.com) -->
+    </body>
+</html>
+{% endspaceless %}
