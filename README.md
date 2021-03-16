@@ -1,4 +1,4 @@
-[![CI](https://github.com/CiscoLive2021/HOLPRG-2002/actions/workflows/main.yml/badge.svg)](https://github.com/CiscoLive2021/HOLPRG-2002/actions/workflows/main.yml)
+[![Documentation](https://github.com/CiscoLive2021/HOLPRG-2002/actions/workflows/documentation_main.yml/badge.svg)](https://github.com/CiscoLive2021/HOLPRG-2002/actions/workflows/documentation_main.yml)
 
 # Network Programability Lab (HOLPRG-2002)
 

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "3a2bf58d-b641-4028-973b-0ef332816fa5",
+		"_postman_id": "40d1dad5-247d-4621-b8f7-8baec924a55d",
 		"name": "CL2021-HOLPRG-2002",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -8,6 +8,87 @@
 		{
 			"name": "Interfaces",
 			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ietf-interfaces:interfaces\": {\n        \"interface\": {\n            \"name\": \"GigabitEthernet2\",\n            \"enabled\": true\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "https://{{host}}/restconf/data/ietf-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces"
+					]
+				},
+				"description": "This reads a single interface from the IOS XE box which already has been configured as a 802.1Q subinterface\nIt uses the native device model (e.g. NED, network element driver)"
+			},
+			"response": []
+		},
+		{
+			"name": "Interfaces",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://{{host}}/restconf/data/ietf-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces"
+					]
+				},
+				"description": "This reads a single interface from the IOS XE box which already has been configured as a 802.1Q subinterface\nIt uses the native device model (e.g. NED, network element driver)"
+			},
+			"response": []
+		},
+		{
+			"name": "Interface",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "C1sco12345",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "developer",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{
@@ -20,23 +101,18 @@
 					}
 				],
 				"url": {
-					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/interface/",
+					"raw": "https://{{host}}/restconf/data/ietf-interfaces:interfaces/interface=GigabitEthernet2",
 					"protocol": "https",
 					"host": [
-						"198",
-						"18",
-						"134",
-						"11"
+						"{{host}}"
 					],
 					"path": [
 						"restconf",
 						"data",
-						"Cisco-IOS-XE-native:native",
-						"interface",
-						""
+						"ietf-interfaces:interfaces",
+						"interface=GigabitEthernet2"
 					]
-				},
-				"description": "This reads a single interface from the IOS XE box which already has been configured as a 802.1Q subinterface\nIt uses the native device model (e.g. NED, network element driver)"
+				}
 			},
 			"response": []
 		},
@@ -46,62 +122,21 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Content-Type",
-						"value": "application/yang-data+json"
-					},
-					{
 						"key": "Accept",
 						"value": "application/yang-data+json"
 					}
 				],
 				"url": {
-					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/hostname",
+					"raw": "https://{{host}}/restconf/data/Cisco-IOS-XE-native:native/hostname",
 					"protocol": "https",
 					"host": [
-						"198",
-						"18",
-						"134",
-						"11"
+						"{{host}}"
 					],
 					"path": [
 						"restconf",
 						"data",
 						"Cisco-IOS-XE-native:native",
 						"hostname"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Interface",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/yang-data+json"
-					},
-					{
-						"key": "Accept",
-						"value": "application/yang-data+json"
-					}
-				],
-				"url": {
-					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=2",
-					"protocol": "https",
-					"host": [
-						"198",
-						"18",
-						"134",
-						"11"
-					],
-					"path": [
-						"restconf",
-						"data",
-						"Cisco-IOS-XE-native:native",
-						"interface",
-						"GigabitEthernet=2"
 					]
 				}
 			},
@@ -130,103 +165,16 @@
 					"raw": "{\"hostname\": \"ABC123\"}"
 				},
 				"url": {
-					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/hostname",
+					"raw": "https://{{host}}/restconf/data/Cisco-IOS-XE-native:native/hostname",
 					"protocol": "https",
 					"host": [
-						"198",
-						"18",
-						"134",
-						"11"
+						"{{host}}"
 					],
 					"path": [
 						"restconf",
 						"data",
 						"Cisco-IOS-XE-native:native",
 						"hostname"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Disable interface",
-			"request": {
-				"method": "PATCH",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic cm9vdDpEX1ZheSFfMTAm"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/yang-data+json"
-					},
-					{
-						"key": "Accept",
-						"value": "application/yang-data+json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"Cisco-IOS-XE-native:GigabitEthernet\": {\n        \"shutdown\": [null]\n    }\n}"
-				},
-				"url": {
-					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=2",
-					"protocol": "https",
-					"host": [
-						"198",
-						"18",
-						"134",
-						"11"
-					],
-					"path": [
-						"restconf",
-						"data",
-						"Cisco-IOS-XE-native:native",
-						"interface",
-						"GigabitEthernet=2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Enable interface",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic cm9vdDpEX1ZheSFfMTAm"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/yang-data+json"
-					},
-					{
-						"key": "Accept",
-						"value": "application/yang-data+json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"Cisco-IOS-XE-native:GigabitEthernet\": {\n        \"name\": \"2\",\n        \"description\": \"This is GigabitEthernet 2\",\n        \"mop\": {\n            \"enabled\": false,\n            \"sysid\": false\n        },\n        \"Cisco-IOS-XE-ethernet:negotiation\": {\n            \"auto\": true\n        }\n    }\n}"
-				},
-				"url": {
-					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=2",
-					"protocol": "https",
-					"host": [
-						"198",
-						"18",
-						"134",
-						"11"
-					],
-					"path": [
-						"restconf",
-						"data",
-						"Cisco-IOS-XE-native:native",
-						"interface",
-						"GigabitEthernet=2"
 					]
 				}
 			},
@@ -238,12 +186,12 @@
 		"basic": [
 			{
 				"key": "password",
-				"value": "cisco",
+				"value": "C1sco12345",
 				"type": "string"
 			},
 			{
 				"key": "username",
-				"value": "cisco",
+				"value": "developer",
 				"type": "string"
 			}
 		]
@@ -271,11 +219,7 @@
 	"variable": [
 		{
 			"key": "host",
-			"value": "ios-xe-mgmt.cisco.com"
-		},
-		{
-			"key": "port",
-			"value": "9443"
+			"value": "sandbox-iosxe-latest-1.cisco.com"
 		}
 	]
 }
