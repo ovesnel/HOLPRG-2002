@@ -21,17 +21,27 @@ IP Addressing and Access Information
 
 .. Note ::
 
-    Some information such as ``username`` and ``password`` will be delivered to the attendees just at the begining of the session.
+    Some information such as ``usernames`` and ``passwords`` may change, if so, it will be delivered to the attendees just at the beginning of the session.
 
 
 Connecting to the Lab
 =====================
 
-Launch the Remote Desktop Client (different versions may use different icons) and login into the client with the following credentials:
+Option 1
+--------
 
-- Username: xxxxx
-- Password: xxxxx
+Launch the Remote Desktop Client (different versions may use depending on OS) and login into the client with the following credentials:
 
-.. image:: images/lab-diagram.svg
-    :width: 25%
-    :align: center
+- Username: ``cisco``
+- Password: ``C1sc012345``
+
+
+Option 2
+--------
+
+Use the ``Cisco AnyConnect Secure Mobility Client`` to connect through a VPN, information will be provided at the beginning of the session.
+
+.. csv-table::
+   :file: ./reference/access-info.csv
+   :width: 80%
+   :header-rows: 1

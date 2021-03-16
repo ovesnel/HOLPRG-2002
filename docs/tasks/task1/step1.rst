@@ -13,6 +13,7 @@ As part of requirements Docker is needed, you can install it using the following
     sudo systemctl start docker
     sudo systemctl enable docker
     sudo usermod -aG docker $(whoami)
+    sudo yum install git
 
 
     
