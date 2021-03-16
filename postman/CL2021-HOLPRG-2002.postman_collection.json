@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "a1672ace-828a-4222-827e-2169174d4a13",
+		"_postman_id": "3a2bf58d-b641-4028-973b-0ef332816fa5",
 		"name": "CL2021-HOLPRG-2002",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -88,7 +88,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=1",
+					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=2",
 					"protocol": "https",
 					"host": [
 						"198",
@@ -101,7 +101,7 @@
 						"data",
 						"Cisco-IOS-XE-native:native",
 						"interface",
-						"GigabitEthernet=1"
+						"GigabitEthernet=2"
 					]
 				}
 			},
@@ -143,6 +143,90 @@
 						"data",
 						"Cisco-IOS-XE-native:native",
 						"hostname"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Disable interface",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cm9vdDpEX1ZheSFfMTAm"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Cisco-IOS-XE-native:GigabitEthernet\": {\n        \"shutdown\": [null]\n    }\n}"
+				},
+				"url": {
+					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=2",
+					"protocol": "https",
+					"host": [
+						"198",
+						"18",
+						"134",
+						"11"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"interface",
+						"GigabitEthernet=2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enable interface",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cm9vdDpEX1ZheSFfMTAm"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Cisco-IOS-XE-native:GigabitEthernet\": {\n        \"name\": \"2\",\n        \"description\": \"This is GigabitEthernet 2\",\n        \"mop\": {\n            \"enabled\": false,\n            \"sysid\": false\n        },\n        \"Cisco-IOS-XE-ethernet:negotiation\": {\n            \"auto\": true\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "https://198.18.134.11/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=2",
+					"protocol": "https",
+					"host": [
+						"198",
+						"18",
+						"134",
+						"11"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"interface",
+						"GigabitEthernet=2"
 					]
 				}
 			},
