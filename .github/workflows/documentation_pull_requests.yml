@@ -1,6 +1,9 @@
-name: Pull Request Checks
+name: PR Checks for Documentation
 
-on: [pull_request]
+on:
+  pull_request:
+    branches:    
+      - main
 
 jobs:
   build:
