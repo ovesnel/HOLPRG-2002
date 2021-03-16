@@ -1,25 +1,55 @@
-Step #1: Install Docker
-#######################
+Step 1: Install Requirements
+############################
+
+Install Docker
+--------------
 
 As part of requirements Docker is needed, you can install it using the following commands:
 
-.. code-block::
+.. literalinclude:: reference/install-docker.sh
+   :language: bash
 
-    #!/bin/bash
+Install docker desktop
 
-    # Install docker
-    sudo yum check-update
-    curl -fsSL https://get.docker.com/ | sh
-    sudo systemctl start docker
-    sudo systemctl enable docker
-    sudo usermod -aG docker $(whoami)
+.. literalinclude:: reference/install-docker-desktop.sh
+   :language: bash
+
+Install Git
+-----------
+
+Install Git using the following command:
+
+.. code-block:: bash
+
     sudo yum install git
 
+Install anx
+-----------
 
-    
-Sub-Title
----------
+Install ANX using the following command:
 
+.. code-block:: bash
+
+    docker run --name netconf-exlorer -d -p 9269:8080 userlerueda/anx
+
+Install Postman
+---------------
+
+Install Postman using the following scripts:
+
+.. literalinclude:: reference/install-postman.sh
+   :language: bash
+
+
+Add potsman icon to desktop:
+
+.. literalinclude:: reference/aad-desktop-icon.sh
+   :language: bash
+
+
+.. Note ::
+
+    The requirements are already installed in your POD, you ``DON'T`` need to install it.
 
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

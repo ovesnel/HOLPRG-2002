@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Step #1: Install Docker &mdash; HOLPRG-2002  documentation</title>
+  <title>Step 1: Install Requirements &mdash; HOLPRG-2002  documentation</title>
   
 
   
@@ -43,7 +43,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Step #2: Clone Repository" href="step2.html" />
+    <link rel="next" title="Step 2: Clone Repository" href="step2.html" />
     <link rel="prev" title="Task #1: Setup Development Environment" href="index.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
 </head>
 
@@ -96,31 +96,30 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/index.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/index.html#objectives">Objectives</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../labaccess/index.html">Lab Access</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#ip-addressing-and-access-information">IP Addressing and Access Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#connecting-to-the-lab">Connecting to the Lab</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1">Option 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2">Option 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2-optional">Option 2 (optional)</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tasks</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Task #1: Setup Development Environment</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Step #1: Install Docker</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sub-title">Sub-Title</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 1: Install Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-docker">Install Docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-git">Install Git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-anx">Install anx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-postman">Install Postman</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="step2.html">Step #2: Clone Repository</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="step2.html#use-visual-studio-code">Use Visual Studio Code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="step2.html#title2">Title2</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="step3.html">Step #3: Final</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="step3.html#title1">Title1</a></li>
-<li class="toctree-l4"><a class="reference internal" href="step3.html#title2">Title2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Clone Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step3.html">Step 3: Use IDE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="step3.html#visual-studio-code">Visual Studio Code</a></li>
 </ul>
 </li>
 </ul>
@@ -240,7 +239,7 @@
         
           <li><a href="index.html">Task #1: Setup Development Environment</a> &raquo;</li>
         
-      <li>Step #1: Install Docker</li>
+      <li>Step 1: Install Requirements</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -261,22 +260,85 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="step-1-install-docker">
-<h1>Step #1: Install Docker<a class="headerlink" href="#step-1-install-docker" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="step-1-install-requirements">
+<h1>Step 1: Install Requirements<a class="headerlink" href="#step-1-install-requirements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install-docker">
+<h2>Install Docker<a class="headerlink" href="#install-docker" title="Permalink to this headline">¶</a></h2>
 <p>As part of requirements Docker is needed, you can install it using the following commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
-# Install docker
 sudo yum check-update
-curl -fsSL https://get.docker.com/ | sh
+curl -fsSL https://get.docker.com/ <span class="p">|</span> sh
 sudo systemctl start docker
-sudo systemctl enable docker
-sudo usermod -aG docker $(whoami)
-sudo yum install git
+sudo systemctl <span class="nb">enable</span> docker
+sudo usermod -aG docker <span class="k">$(</span>whoami<span class="k">)</span>
 </pre></div>
 </div>
-<div class="section" id="sub-title">
-<h2>Sub-Title<a class="headerlink" href="#sub-title" title="Permalink to this headline">¶</a></h2>
+<p>Install docker desktop</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo curl -L <span class="s2">&quot;https://github.com/docker/compose/releases/download/1.28.5/docker-compose-</span><span class="k">$(</span>uname -s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">&quot;</span> -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-git">
+<h2>Install Git<a class="headerlink" href="#install-git" title="Permalink to this headline">¶</a></h2>
+<p>Install Git using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo yum install git
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-anx">
+<h2>Install anx<a class="headerlink" href="#install-anx" title="Permalink to this headline">¶</a></h2>
+<p>Install ANX using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --name netconf-exlorer -d -p <span class="m">9269</span>:8080 userlerueda/anx
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-postman">
+<h2>Install Postman<a class="headerlink" href="#install-postman" title="Permalink to this headline">¶</a></h2>
+<p>Install Postman using the following scripts:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nb">cd</span> /tmp <span class="o">||</span> <span class="nb">exit</span>
+<span class="nb">echo</span> <span class="s2">&quot;Downloading Postman ...&quot;</span>
+wget -q https://dl.pstmn.io/download/latest/linux?arch<span class="o">=</span><span class="m">64</span> -O postman.tar.gz
+tar -xzf postman.tar.gz
+rm postman.tar.gz
+
+<span class="nb">echo</span> <span class="s2">&quot;Installing to opt...&quot;</span>
+<span class="k">if</span> <span class="o">[</span> -d <span class="s2">&quot;/opt/Postman&quot;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+    sudo rm -rf /opt/Postman
+<span class="k">fi</span>
+sudo mv Postman /opt/Postman
+
+<span class="nb">echo</span> <span class="s2">&quot;Creating symbolic link...&quot;</span>
+<span class="k">if</span> <span class="o">[</span> -L <span class="s2">&quot;/usr/bin/postman&quot;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+    sudo rm -f /usr/bin/postman
+<span class="k">fi</span>
+sudo ln -s /opt/Postman/Postman /usr/bin/postman
+
+<span class="nb">echo</span> <span class="s2">&quot;Installation completed successfully.&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;You can use Postman!&quot;</span>
+</pre></div>
+</div>
+<p>Add potsman icon to desktop:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat &gt; ~/Desktop/postman.desktop <span class="s">&lt;&lt;EOL</span>
+<span class="s">[Desktop Entry]</span>
+<span class="s">Encoding=UTF-8</span>
+<span class="s">Name=Postman</span>
+<span class="s">Exec=postman</span>
+<span class="s">Icon=/opt/Postman/resources/app/assets/icon.png</span>
+<span class="s">Terminal=false</span>
+<span class="s">Type=Application</span>
+<span class="s">Categories=Development;</span>
+<span class="s">EOL</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The requirements are already installed in your POD, you <code class="docutils literal notranslate"><span class="pre">DON'T</span></code> need to install it.</p>
+</div>
 <p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 </div>
@@ -287,7 +349,7 @@ sudo yum install git
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="step2.html" class="btn btn-neutral float-right" title="Step #2: Clone Repository" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="step2.html" class="btn btn-neutral float-right" title="Step 2: Clone Repository" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="index.html" class="btn btn-neutral float-left" title="Task #1: Setup Development Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

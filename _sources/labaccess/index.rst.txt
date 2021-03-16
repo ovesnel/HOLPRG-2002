@@ -36,8 +36,11 @@ Launch the Remote Desktop Client (different versions may use depending on OS) an
 - Password: ``C1sc012345``
 
 
-Option 2
---------
+From Remote Desktop you can acccess network devices, Docker, GitHub repo and documentation. In addition you can create your enviroment to start to build your self service portal.
+
+
+Option 2 (optional)
+-------------------
 
 Use the ``Cisco AnyConnect Secure Mobility Client`` to connect through a VPN, information will be provided at the beginning of the session.
 

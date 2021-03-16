@@ -1,35 +1,42 @@
-Step #2: Clone Repository
-#########################
+Step 2: Clone Repository
+########################
 
-To clone the repository floww the instrucctions bellow:
+To clone the repository follow the instructions bellow:
 
-1- Go to following URL `c <https://github.com/CiscoLive2021/HOLPRG-2002>`__
+1- Go to the following URL `HOLPRG-2002 <https://github.com/CiscoLive2021/HOLPRG-2002>`__
+
 2- Copy the repo's URL:
 
-.. code-block::
+.. image:: images/repo-url.png
+    :width: 75%
+    :align: center
+
+
+.. code-block:: bash
 
     https://github.com/CiscoLive2021/HOLPRG-2002.git
 
-3- Open a terminal and copy and issue the following command:
+3- Open a terminal and run the following command:
 
-.. code-block::
+.. code-block:: bash
 
     git clone https://github.com/CiscoLive2021/HOLPRG-2002.git
 
-4- Move to the local repo directory:
+.. image:: images/open-terminal.png
+    :width: 75%
+    :align: center
+
+4- Move to the local repo directory and verify that the repo has been cloned:
 
 .. code-block::
 
     cd HOLPRG-2002
 
+.. image:: images/terminal-2.png
+    :width: 75%
+    :align: center
 
-Use Visual Studio Code
-----------------------
 
-
-
-Title2
-------
 
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
