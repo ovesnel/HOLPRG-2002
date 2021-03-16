@@ -43,7 +43,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Step #2" href="step2.html" />
+    <link rel="next" title="Step #2: Clone Repository" href="step2.html" />
     <link rel="prev" title="Task #1: Setup Development Environment" href="index.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
 </head>
 
@@ -100,7 +100,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../labaccess/index.html">Lab Access</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#ip-addressing-and-access-information">IP Addressing and Access Information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#connecting-to-the-lab">Connecting to the Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#connecting-to-the-lab">Connecting to the Lab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1">Option 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2">Option 2</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tasks</a><ul class="current">
@@ -109,8 +113,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#sub-title">Sub-Title</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="step2.html">Step #2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="step2.html#title1">Title1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step2.html">Step #2: Clone Repository</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="step2.html#use-visual-studio-code">Use Visual Studio Code</a></li>
 <li class="toctree-l4"><a class="reference internal" href="step2.html#title2">Title2</a></li>
 </ul>
 </li>
@@ -268,6 +272,7 @@ curl -fsSL https://get.docker.com/ | sh
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $(whoami)
+sudo yum install git
 </pre></div>
 </div>
 <div class="section" id="sub-title">
@@ -282,7 +287,7 @@ sudo usermod -aG docker $(whoami)
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="step2.html" class="btn btn-neutral float-right" title="Step #2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="step2.html" class="btn btn-neutral float-right" title="Step #2: Clone Repository" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="index.html" class="btn btn-neutral float-left" title="Task #1: Setup Development Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
