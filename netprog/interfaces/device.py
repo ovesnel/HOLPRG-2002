@@ -1,5 +1,4 @@
 import json
-import re
 import requests
 
 
@@ -31,7 +30,7 @@ def set_interface(interface, enabled, hostname, username, password):
 
 def get_interfaces(hostname, username, password):
     interfaces = []
-    url = f"https://{hostname}/restconf/data/ietf-interfaces:interfaces"
+    url = f"https://{hostname}/restconf/data/ietf-interfaces:interfaces/interface"
 
     headers = headers = {"Accept": "application/yang-data+json"}
     try:
@@ -44,11 +43,7 @@ def get_interfaces(hostname, username, password):
         )
 
         if response.ok:
-            interfaces = (
-                response.json()
-                .get("ietf-interfaces:interfaces", {})
-                .get("interface", [])
-            )
+            interfaces = response.json().get("ietf-interfaces:interface", [])
 
     except Exception as err:
         print(f"There was an error getting interfaces: {err}")
