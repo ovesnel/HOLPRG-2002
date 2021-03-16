@@ -1,5 +1,10 @@
+import json
+import re
 import requests
-from requests.auth import HTTPBasicAuth
+
+
+def interface_split(interface):
+    return list(filter(None, re.split(r"(\d+)", interface)))
 
 
 def convert_interface_object(interface_object):
@@ -21,6 +26,75 @@ def convert_interface_object(interface_object):
     return interfaces
 
 
+def disable_interface(interface, hostname, username, password):
+    interface_full = interface_split(interface)
+    interface_type = interface_full[0]
+    interface_number = interface_full[1]
+    url = f"https://{hostname}/restconf/data/Cisco-IOS-XE-native:native/interface/{interface_type}={interface_number}"
+    headers = headers = {"Content-type": "application/yang-data+json"}
+    payload = {f"Cisco-IOS-XE-native:{interface_type}": {"shutdown": [None]}}
+    try:
+        response = requests.request(
+            "PATCH",
+            url,
+            data=json.dumps(payload),
+            headers=headers,
+            auth=(username, password),
+            verify=False,
+        )
+
+        if response.ok:
+            return True
+
+    except Exception as err:
+        print(f"There was an error disabling interface: {err}")
+        return False
+
+
+def enable_interface(interface, hostname, username, password):
+    interface_full = interface_split(interface)
+    interface_type = interface_full[0]
+    interface_number = interface_full[1]
+    url = f"https://{hostname}/restconf/data/Cisco-IOS-XE-native:native/interface/{interface_type}={interface_number}"
+    headers = headers = {
+        "Accept": "application/yang-data+json",
+        "Content-type": "application/yang-data+json",
+    }
+    try:
+
+        response = requests.request(
+            "GET",
+            url,
+            headers=headers,
+            auth=(username, password),
+            verify=False,
+        )
+
+        if response.ok:
+            payload = response.json()
+            details = payload.pop(f"Cisco-IOS-XE-native:{interface_type}", None)
+
+            if details:
+                details.pop("shutdown", None)
+                payload[f"Cisco-IOS-XE-native:{interface_type}"] = details
+
+        response = requests.request(
+            "PUT",
+            url,
+            data=json.dumps(payload),
+            headers=headers,
+            auth=(username, password),
+            verify=False,
+        )
+
+        if response.ok:
+            return True
+
+    except Exception as err:
+        print(f"There was an error enabling interface: {err}")
+        return False
+
+
 def get_interfaces(hostname, username, password):
     interfaces = []
     url = f"https://{hostname}/restconf/data/Cisco-IOS-XE-native:native/interface"
@@ -31,7 +105,7 @@ def get_interfaces(hostname, username, password):
             "GET",
             url,
             headers=headers,
-            auth=HTTPBasicAuth(username, password),
+            auth=(username, password),
             verify=False,
         )
 
