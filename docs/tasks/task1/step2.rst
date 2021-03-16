@@ -1,9 +1,9 @@
 Step 2: Clone Repository
 ########################
 
-To clone the repository floww the instrucctions bellow:
+To clone the repository follow the instructions bellow:
 
-1- Go to following URL `HOLPRG-2002 <https://github.com/CiscoLive2021/HOLPRG-2002>`__
+1- Go to the following URL `HOLPRG-2002 <https://github.com/CiscoLive2021/HOLPRG-2002>`__
 
 2- Copy the repo's URL:
 
@@ -16,7 +16,7 @@ To clone the repository floww the instrucctions bellow:
 
     https://github.com/CiscoLive2021/HOLPRG-2002.git
 
-3- Open a terminal and copy and issue the following command:
+3- Open a terminal and run the following command:
 
 .. code-block:: bash
 
