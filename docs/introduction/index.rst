@@ -8,7 +8,8 @@ Upon completion of this lab, you wiil be able to:
 
 - Understand and install elements or components needed to develop a self service portal.
 - Write and run scripts to create a self service portal.
-- Use Angular ????
+- Use NETCONF and RESTCONF to manage network devices
+- Use Django as Web framework ????
 - Get familiar with ???
 - Learn how a service portal can inteface with devices to configure non-complex service.
 
@@ -19,4 +20,4 @@ Prerequisites
 - Basic programability experience 
 - Basic Linux commands
 - Basic GitHub experience 
-- Have cisco any connect installed ???
+- Have cisco any connect installed (optional)
