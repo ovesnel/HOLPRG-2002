@@ -17,9 +17,11 @@ Lets now start our container with docker-compose using the following command:
 
    docker-compose up
 
+The following is a sample output from the above command:
+
 .. code-block::
 
-   ❯ docker-compose up
+   [cisco@centos HOLPRG-2002]$ docker-compose up
    Starting cl_app_1 ... done
    Attaching to cl_app_1
    app_1  | Watching for file changes with StatReloader
