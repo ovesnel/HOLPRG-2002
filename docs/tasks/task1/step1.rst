@@ -1,55 +1,42 @@
-Step 1: Install Requirements
-############################
+Step 1: Clone Repository
+########################
 
-Install Docker
---------------
+To clone the repository follow the instructions below:
 
-As part of requirements Docker is needed, you can install it using the following commands:
+1- Go to the following URL `HOLPRG-2002 <https://github.com/CiscoLive2021/HOLPRG-2002>`__
 
-.. literalinclude:: reference/install-docker.sh
-   :language: bash
+2- Copy the repo's URL:
 
-Install docker desktop
+.. image:: images/repo-url.png
+    :width: 75%
+    :align: center
 
-.. literalinclude:: reference/install-docker-desktop.sh
-   :language: bash
-
-Install Git
------------
-
-Install Git using the following command:
 
 .. code-block:: bash
 
-    sudo yum install git
+    https://github.com/CiscoLive2021/HOLPRG-2002.git
 
-Install anx
------------
-
-Install ANX using the following command:
+3- Open a terminal and run the following command:
 
 .. code-block:: bash
 
-    docker run --name netconf-exlorer -d -p 9269:8080 userlerueda/anx
+    git clone https://github.com/CiscoLive2021/HOLPRG-2002.git
 
-Install Postman
----------------
+.. image:: images/open-terminal.png
+    :width: 75%
+    :align: center
 
-Install Postman using the following scripts:
+4- Move to the local repo directory and verify that the repo has been cloned:
 
-.. literalinclude:: reference/install-postman.sh
-   :language: bash
+.. code-block::
+
+    cd HOLPRG-2002
+
+.. image:: images/terminal-2.png
+    :width: 75%
+    :align: center
 
 
-Add potsman icon to desktop:
-
-.. literalinclude:: reference/aad-desktop-icon.sh
-   :language: bash
-
-
-.. Note ::
-
-    The requirements are already installed in your POD, you ``DON'T`` need to install it.
 
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
