@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Step #2: Create a Table &mdash; HOLPRG-2002  documentation</title>
+  <title>Step 2: Create a Django Application &mdash; HOLPRG-2002  documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Step #3: Visualize Information from CSV" href="step3.html" />
-    <link rel="prev" title="Step #1: Determining Data Structure" href="step1.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
+    <link rel="next" title="Step 3: Create Interfaces HTML View" href="step3.html" />
+    <link rel="prev" title="Step 1: Determining Data Structure" href="step1.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -121,18 +121,9 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Task #2: Obtaining Device Information</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="step1.html">Step #1: Determining Data Structure</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="step1.html#sub-title">Sub-Title</a></li>
-</ul>
-</li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Step #2: Create a Table</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sub-title">Sub-Title</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="step3.html">Step #3: Visualize Information from CSV</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="step3.html#sub-title">Sub-Title</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="step1.html">Step 1: Determining Data Structure</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 2: Create a Django Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step3.html">Step 3: Create Interfaces HTML View</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../task3/index.html">Task #3: Build UI Logic</a><ul>
@@ -242,7 +233,7 @@
         
           <li><a href="index.html">Task #2: Obtaining Device Information</a> &raquo;</li>
         
-      <li>Step #2: Create a Table</li>
+      <li>Step 2: Create a Django Application</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -263,13 +254,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="step-2-create-a-table">
-<h1>Step #2: Create a Table<a class="headerlink" href="#step-2-create-a-table" title="Permalink to this headline">¶</a></h1>
-<p>Create a table with the information to be shown</p>
-<div class="section" id="sub-title">
-<h2>Sub-Title<a class="headerlink" href="#sub-title" title="Permalink to this headline">¶</a></h2>
-<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
+  <div class="section" id="step-2-create-a-django-application">
+<h1>Step 2: Create a Django Application<a class="headerlink" href="#step-2-create-a-django-application" title="Permalink to this headline">¶</a></h1>
+<p>The first thing that needs to be done is to create an application for us to capture the interfaces.
+Each application you write in Django consists of a Python package that follows a certain convention.
+In our case we will call this application <code class="docutils literal notranslate"><span class="pre">interfaces</span></code></p>
+<p>To create it, let’s open another terminal (without closing the one where docker-compose is running) and execute a shell into the exsiting container:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[cisco@centos HOLPRG-2002]$ docker exec -it cl_app_1 bash
+root@5109156083d2:/app#
+</pre></div>
 </div>
+<p>Once in the application’s bash shell, let’s create the DJANGO application by issuing the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="n">interfaces</span>
+</pre></div>
+</div>
+<p>This will create a directory called <code class="docutils literal notranslate"><span class="pre">interfaces</span></code> inside our <code class="docutils literal notranslate"><span class="pre">netprog</span></code> directory.
+It will have the proper Django structure.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="o">@</span><span class="mi">5109156083</span><span class="n">d2</span><span class="p">:</span><span class="o">/</span><span class="n">app</span><span class="c1"># ls -la interfaces/</span>
+<span class="n">total</span> <span class="mi">24</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">.</span> <span class="mi">3</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="o">.</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">.</span> <span class="mi">4</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">70</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="o">..</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">63</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="n">admin</span><span class="o">.</span><span class="n">py</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">95</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="n">apps</span><span class="o">.</span><span class="n">py</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">.</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">24</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="n">migrations</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">57</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="n">models</span><span class="o">.</span><span class="n">py</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">60</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="n">tests</span><span class="o">.</span><span class="n">py</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">63</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="n">views</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 
 
@@ -278,8 +292,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="step3.html" class="btn btn-neutral float-right" title="Step #3: Visualize Information from CSV" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="step1.html" class="btn btn-neutral float-left" title="Step #1: Determining Data Structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step3.html" class="btn btn-neutral float-right" title="Step 3: Create Interfaces HTML View" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="step1.html" class="btn btn-neutral float-left" title="Step 1: Determining Data Structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

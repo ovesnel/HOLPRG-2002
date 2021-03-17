@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Step #1: Determining Data Structure &mdash; HOLPRG-2002  documentation</title>
+  <title>Step 1: Determining Data Structure &mdash; HOLPRG-2002  documentation</title>
   
 
   
@@ -43,7 +43,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Step #2: Create a Table" href="step2.html" />
+    <link rel="next" title="Step 2: Create a Django Application" href="step2.html" />
     <link rel="prev" title="Task #2: Obtaining Device Information" href="index.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
 </head>
 
@@ -121,18 +121,9 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Task #2: Obtaining Device Information</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Step #1: Determining Data Structure</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sub-title">Sub-Title</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="step2.html">Step #2: Create a Table</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="step2.html#sub-title">Sub-Title</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="step3.html">Step #3: Visualize Information from CSV</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="step3.html#sub-title">Sub-Title</a></li>
-</ul>
-</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 1: Determining Data Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Create a Django Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step3.html">Step 3: Create Interfaces HTML View</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../task3/index.html">Task #3: Build UI Logic</a><ul>
@@ -242,7 +233,7 @@
         
           <li><a href="index.html">Task #2: Obtaining Device Information</a> &raquo;</li>
         
-      <li>Step #1: Determining Data Structure</li>
+      <li>Step 1: Determining Data Structure</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -264,51 +255,46 @@
            <div itemprop="articleBody">
             
   <div class="section" id="step-1-determining-data-structure">
-<h1>Step #1: Determining Data Structure<a class="headerlink" href="#step-1-determining-data-structure" title="Permalink to this headline">¶</a></h1>
+<h1>Step 1: Determining Data Structure<a class="headerlink" href="#step-1-determining-data-structure" title="Permalink to this headline">¶</a></h1>
 <p>The first step is to determine the data structure for the device’s interfaces.</p>
 <p>In order to do so, we will use postman to connect to the device and obtain information about the interfaces.</p>
-<p>Create a CSV file with the information that we want to read, use following as example:</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Device</p></th>
-<th class="head"><p>Interface</p></th>
-<th class="head"><p>Sub-Interface</p></th>
-<th class="head"><p>IP</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>CRS1K</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>CRS1K</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>CRS1K</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<div class="section" id="sub-title">
-<h2>Sub-Title<a class="headerlink" href="#sub-title" title="Permalink to this headline">¶</a></h2>
-<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
+<p>From the body of the response we obtain the following structure:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="nt">&quot;ietf-interfaces:interface&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GigabitEthernet1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;iana-if-type:ethernetCsmacd&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;ietf-ip:ipv4&quot;</span><span class="p">:</span> <span class="p">{</span>
+               <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="p">[</span>
+                  <span class="p">{</span>
+                        <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;198.18.134.11&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;netmask&quot;</span><span class="p">:</span> <span class="s2">&quot;255.255.192.0&quot;</span>
+                  <span class="p">}</span>
+               <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;ietf-ip:ipv6&quot;</span><span class="p">:</span> <span class="p">{}</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GigabitEthernet2&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is GigabitEthernet 2&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;iana-if-type:ethernetCsmacd&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&quot;ietf-ip:ipv4&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="nt">&quot;ietf-ip:ipv6&quot;</span><span class="p">:</span> <span class="p">{}</span>
+      <span class="p">}</span>
+   <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
 </div>
+<p>From the above output, we have an array of interfaces with the following relevant keys:</p>
+<ul class="simple">
+<li><p>name</p></li>
+<li><p>description</p></li>
+<li><p>enabled</p></li>
+</ul>
+<p>We want to take this information and build a table like the specified below:</p>
+<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 
 
@@ -317,7 +303,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="step2.html" class="btn btn-neutral float-right" title="Step #2: Create a Table" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="step2.html" class="btn btn-neutral float-right" title="Step 2: Create a Django Application" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="index.html" class="btn btn-neutral float-left" title="Task #2: Obtaining Device Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

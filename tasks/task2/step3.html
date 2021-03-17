@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Step #3: Visualize Information from CSV &mdash; HOLPRG-2002  documentation</title>
+  <title>Step 3: Create Interfaces HTML View &mdash; HOLPRG-2002  documentation</title>
   
 
   
@@ -44,7 +44,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Task #3: Build UI Logic" href="../task3/index.html" />
-    <link rel="prev" title="Step #2: Create a Table" href="step2.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
+    <link rel="prev" title="Step 2: Create a Django Application" href="step2.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -121,18 +121,9 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Task #2: Obtaining Device Information</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="step1.html">Step #1: Determining Data Structure</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="step1.html#sub-title">Sub-Title</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="step2.html">Step #2: Create a Table</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="step2.html#sub-title">Sub-Title</a></li>
-</ul>
-</li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Step #3: Visualize Information from CSV</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sub-title">Sub-Title</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="step1.html">Step 1: Determining Data Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Create a Django Application</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 3: Create Interfaces HTML View</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../task3/index.html">Task #3: Build UI Logic</a><ul>
@@ -242,7 +233,7 @@
         
           <li><a href="index.html">Task #2: Obtaining Device Information</a> &raquo;</li>
         
-      <li>Step #3: Visualize Information from CSV</li>
+      <li>Step 3: Create Interfaces HTML View</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -263,13 +254,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="step-3-visualize-information-from-csv">
-<h1>Step #3: Visualize Information from CSV<a class="headerlink" href="#step-3-visualize-information-from-csv" title="Permalink to this headline">¶</a></h1>
-<p>List all the information using <code class="docutils literal notranslate"><span class="pre">CSV</span></code> file as a source</p>
-<div class="section" id="sub-title">
-<h2>Sub-Title<a class="headerlink" href="#sub-title" title="Permalink to this headline">¶</a></h2>
-<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
+  <div class="section" id="step-3-create-interfaces-html-view">
+<h1>Step 3: Create Interfaces HTML View<a class="headerlink" href="#step-3-create-interfaces-html-view" title="Permalink to this headline">¶</a></h1>
+<p>Now that our application is ready, lets create a Django view for it.
+The view, allows us to produce HTML code that will be presented to the user when they open the browser for our project.</p>
+<p>Lets start by modifying the <code class="docutils literal notranslate"><span class="pre">views.py</span></code> file inside <code class="docutils literal notranslate"><span class="pre">interfaces</span></code> and adding the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
+<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 
 
@@ -279,7 +272,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../task3/index.html" class="btn btn-neutral float-right" title="Task #3: Build UI Logic" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="step2.html" class="btn btn-neutral float-left" title="Step #2: Create a Table" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step2.html" class="btn btn-neutral float-left" title="Step 2: Create a Django Application" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
