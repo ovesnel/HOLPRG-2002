@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Step #1: Create CSV File &mdash; HOLPRG-2002  documentation</title>
+  <title>Step #1: Determining Data Structure &mdash; HOLPRG-2002  documentation</title>
   
 
   
@@ -44,7 +44,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Step #2: Create a Table" href="step2.html" />
-    <link rel="prev" title="Task #2: Integration with API" href="index.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
+    <link rel="prev" title="Task #2: Obtaining Device Information" href="index.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,7 +96,6 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/index.html#prerequisites">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../introduction/index.html#objectives">Objectives</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../labaccess/index.html">Lab Access</a><ul>
@@ -110,22 +109,19 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tasks</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../task1/index.html">Task #1: Setup Development Environment</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../task1/step1.html">Step 1: Install Requirements</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../task1/step1.html#install-docker">Install Docker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../task1/step1.html#install-git">Install Git</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../task1/step1.html#install-anx">Install anx</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../task1/step1.html#install-postman">Install Postman</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../task1/step1.html">Step 1: Clone Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../task1/step2.html">Step 2: Use IDE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../task1/step2.html#visual-studio-code">Visual Studio Code</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../task1/step2.html">Step 2: Clone Repository</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../task1/step3.html">Step 3: Use IDE</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../task1/step3.html#visual-studio-code">Visual Studio Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../task1/step3.html">Step 3: Setup DJANGO Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../task1/step4.html">Step 4: Create Dockerfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../task1/step5.html">Step 5: Build and Run Our Application Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../task1/step6.html">Step 6: Using Docker Compose</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Task #2: Integration with API</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Step #1: Create CSV File</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Task #2: Obtaining Device Information</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Step #1: Determining Data Structure</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#sub-title">Sub-Title</a></li>
 </ul>
 </li>
@@ -187,6 +183,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../conclusions.html">Conclusions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix.html">Appendix: Installing Pre-Requisites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix.html#install-docker">Install Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix.html#install-git">Install Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix.html#install-anx">Install anx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix.html#install-postman">Install Postman</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -237,9 +240,9 @@
         
           <li><a href="../index.html">Tasks</a> &raquo;</li>
         
-          <li><a href="index.html">Task #2: Integration with API</a> &raquo;</li>
+          <li><a href="index.html">Task #2: Obtaining Device Information</a> &raquo;</li>
         
-      <li>Step #1: Create CSV File</li>
+      <li>Step #1: Determining Data Structure</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -260,8 +263,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="step-1-create-csv-file">
-<h1>Step #1: Create CSV File<a class="headerlink" href="#step-1-create-csv-file" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="step-1-determining-data-structure">
+<h1>Step #1: Determining Data Structure<a class="headerlink" href="#step-1-determining-data-structure" title="Permalink to this headline">¶</a></h1>
+<p>The first step is to determine the data structure for the device’s interfaces.</p>
+<p>In order to do so, we will use postman to connect to the device and obtain information about the interfaces.</p>
 <p>Create a CSV file with the information that we want to read, use following as example:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -313,7 +318,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="step2.html" class="btn btn-neutral float-right" title="Step #2: Create a Table" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="index.html" class="btn btn-neutral float-left" title="Task #2: Integration with API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Task #2: Obtaining Device Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

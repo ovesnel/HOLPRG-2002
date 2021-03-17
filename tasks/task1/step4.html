@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Step 2: Use IDE &mdash; HOLPRG-2002  documentation</title>
+  <title>Step 4: Create Dockerfile &mdash; HOLPRG-2002  documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Step 3: Setup DJANGO Project" href="step3.html" />
-    <link rel="prev" title="Step 1: Clone Repository" href="step1.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
+    <link rel="next" title="Step 5: Build and Run Our Application Container" href="step5.html" />
+    <link rel="prev" title="Step 3: Setup DJANGO Project" href="step3.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -110,12 +110,12 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tasks</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Task #1: Setup Development Environment</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="step1.html">Step 1: Clone Repository</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 2: Use IDE</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#visual-studio-code">Visual Studio Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Use IDE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="step2.html#visual-studio-code">Visual Studio Code</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="step3.html">Step 3: Setup DJANGO Project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="step4.html">Step 4: Create Dockerfile</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 4: Create Dockerfile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step5.html">Step 5: Build and Run Our Application Container</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step6.html">Step 6: Using Docker Compose</a></li>
 </ul>
@@ -242,14 +242,14 @@
         
           <li><a href="index.html">Task #1: Setup Development Environment</a> &raquo;</li>
         
-      <li>Step 2: Use IDE</li>
+      <li>Step 4: Create Dockerfile</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
             
-              <a href="https://https://github.com//userlerueda/HOLPRG-2002/blob/master/docs/tasks/task1/step2.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://https://github.com//userlerueda/HOLPRG-2002/blob/master/docs/tasks/task1/step4.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -263,18 +263,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="step-2-use-ide">
-<h1>Step 2: Use IDE<a class="headerlink" href="#step-2-use-ide" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="visual-studio-code">
-<h2>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this headline">¶</a></h2>
-<p>For this session we recommend to use Visual Studio Code (VSC) which is installed in your POD, to open your repo <code class="docutils literal notranslate"><span class="pre">HOLPRG-2002</span></code> in VSC follow the instructions:</p>
-<p>1- From your terminal within repo directory <code class="docutils literal notranslate"><span class="pre">HOLPRG-2002</span></code> run the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code .
+  <div class="section" id="step-4-create-dockerfile">
+<h1>Step 4: Create Dockerfile<a class="headerlink" href="#step-4-create-dockerfile" title="Permalink to this headline">¶</a></h1>
+<p>We will now create a <cite>Dockerfile</cite>, this is required in order for us to run our DJANGO application as a container (this ensures that we get the same result independent of the underlying operating system).</p>
+<p>Copy the following code to a file called <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> in the root of our repository.</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">FROM</span> <span class="s">python:3-slim-buster</span>
+
+<span class="c"># Create the /app directory an set it as the default workspace</span>
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+
+<span class="c"># Copy the requirements.txt file inside the container</span>
+<span class="k">COPY</span> requirements.txt .
+
+<span class="c"># Install python requirements to ensure DJANGO is installed</span>
+<span class="k">RUN</span> pip install -r requirements.txt --no-cache-dir
+
+<span class="c"># Copy the contents of our DJANGO project into /app directory inside the container</span>
+<span class="k">COPY</span> ./netprog .
+
+<span class="c"># Upon container start, lets run DJANGO manage.py on port 80</span>
+<span class="k">CMD</span> <span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;manage.py&quot;</span><span class="p">,</span> <span class="s2">&quot;runserver&quot;</span><span class="p">,</span> <span class="s2">&quot;0.0.0.0:80&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../../_images/vsc.png"><img alt="../../_images/vsc.png" class="align-center" src="../../_images/vsc.png" style="width: 75%;" /></a>
-<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
+<p>After our Dockerfile is completed, we will need to create the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> referenced in our Dockerfile.</p>
+<p>Lets create a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> in the root of our repository, with the following contents:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Django</span><span class="o">==</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">7</span>
+<span class="n">requests</span><span class="o">==</span><span class="mf">2.25</span><span class="o">.</span><span class="mi">1</span>
+</pre></div>
 </div>
+<p>We have specified two requirements, one is DJANGO, the other one which is requests will be needed when we need to query CSR1000v’s APIs.
+We will included it now to avoid having to rebuild our image later.
+If anything changes in the requirements.txt file, we will have to rebuild our container.</p>
+<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 
 
@@ -283,8 +303,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="step3.html" class="btn btn-neutral float-right" title="Step 3: Setup DJANGO Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="step1.html" class="btn btn-neutral float-left" title="Step 1: Clone Repository" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step5.html" class="btn btn-neutral float-right" title="Step 5: Build and Run Our Application Container" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="step3.html" class="btn btn-neutral float-left" title="Step 3: Setup DJANGO Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

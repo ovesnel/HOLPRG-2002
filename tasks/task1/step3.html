@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Step 3: Use IDE &mdash; HOLPRG-2002  documentation</title>
+  <title>Step 3: Setup DJANGO Project &mdash; HOLPRG-2002  documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Task #2: Integration with API" href="../task2/index.html" />
-    <link rel="prev" title="Step 2: Clone Repository" href="step2.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
+    <link rel="next" title="Step 4: Create Dockerfile" href="step4.html" />
+    <link rel="prev" title="Step 2: Use IDE" href="step2.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,7 +96,6 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/index.html#prerequisites">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../introduction/index.html#objectives">Objectives</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../labaccess/index.html">Lab Access</a><ul>
@@ -110,22 +109,19 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tasks</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Task #1: Setup Development Environment</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="step1.html">Step 1: Install Requirements</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="step1.html#install-docker">Install Docker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="step1.html#install-git">Install Git</a></li>
-<li class="toctree-l4"><a class="reference internal" href="step1.html#install-anx">Install anx</a></li>
-<li class="toctree-l4"><a class="reference internal" href="step1.html#install-postman">Install Postman</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step1.html">Step 1: Clone Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Use IDE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="step2.html#visual-studio-code">Visual Studio Code</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Clone Repository</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 3: Use IDE</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#visual-studio-code">Visual Studio Code</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 3: Setup DJANGO Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step4.html">Step 4: Create Dockerfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step5.html">Step 5: Build and Run Our Application Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step6.html">Step 6: Using Docker Compose</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../task2/index.html">Task #2: Integration with API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../task2/step1.html">Step #1: Create CSV File</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../task2/index.html">Task #2: Obtaining Device Information</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../task2/step1.html">Step #1: Determining Data Structure</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../task2/step1.html#sub-title">Sub-Title</a></li>
 </ul>
 </li>
@@ -187,6 +183,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../conclusions.html">Conclusions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix.html">Appendix: Installing Pre-Requisites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix.html#install-docker">Install Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix.html#install-git">Install Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix.html#install-anx">Install anx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix.html#install-postman">Install Postman</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -239,7 +242,7 @@
         
           <li><a href="index.html">Task #1: Setup Development Environment</a> &raquo;</li>
         
-      <li>Step 3: Use IDE</li>
+      <li>Step 3: Setup DJANGO Project</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -260,18 +263,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="step-3-use-ide">
-<h1>Step 3: Use IDE<a class="headerlink" href="#step-3-use-ide" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="visual-studio-code">
-<h2>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this headline">¶</a></h2>
-<p>For this session we recommend to use Visual Studio Code (VSC) which is installed in your POD, to open your repo <code class="docutils literal notranslate"><span class="pre">HOLPRG-2002</span></code> in VSC follow the instructions:</p>
-<p>1- From your terminal within repo directory <code class="docutils literal notranslate"><span class="pre">HOLPRG-2002</span></code> run the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code .
+  <div class="section" id="step-3-setup-django-project">
+<h1>Step 3: Setup DJANGO Project<a class="headerlink" href="#step-3-setup-django-project" title="Permalink to this headline">¶</a></h1>
+<p>The first thing we need to do is to create a new DJANGO project, in order to do so, we will start a container with Python 3 and install DJANGO library.</p>
+<p>The following docker commands will allow you to start a container from <strong>python:3-slim-buster</strong> image and executing a <strong>bash</strong> prompt.
+The <cite>-v</cite> and <cite>-w</cite> switches allow us to map the local folder into the container in the <cite>/app</cite> directory and set the default workspace to <cite>/app</cite>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/HOLPRG-2002
+docker run -it --rm -v <span class="nv">$PWD</span>:/app -w /app python:3-slim-buster bash
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../../_images/vsc.png"><img alt="../../_images/vsc.png" class="align-center" src="../../_images/vsc.png" style="width: 75%;" /></a>
-<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
+<p>Once we have a bash prompt inside the container, let’s install django using Python’s package manager.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install django
+</pre></div>
 </div>
+<p>The following is the expected output after executing the command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@e0b3a8214a19:/app# pip install django
+Collecting django
+Downloading Django-3.1.7-py3-none-any.whl <span class="o">(</span><span class="m">7</span>.8 MB<span class="o">)</span>
+<span class="p">|</span>████████████████████████████████<span class="p">|</span> <span class="m">7</span>.8 MB <span class="m">3</span>.8 MB/s
+Collecting sqlparse&gt;<span class="o">=</span><span class="m">0</span>.2.2
+Downloading sqlparse-0.4.1-py3-none-any.whl <span class="o">(</span><span class="m">42</span> kB<span class="o">)</span>
+<span class="p">|</span>████████████████████████████████<span class="p">|</span> <span class="m">42</span> kB <span class="m">1</span>.2 MB/s
+Collecting pytz
+Downloading pytz-2021.1-py2.py3-none-any.whl <span class="o">(</span><span class="m">510</span> kB<span class="o">)</span>
+<span class="p">|</span>████████████████████████████████<span class="p">|</span> <span class="m">510</span> kB <span class="m">3</span>.6 MB/s
+Collecting asgiref&lt;<span class="m">4</span>,&gt;<span class="o">=</span><span class="m">3</span>.2.10
+Downloading asgiref-3.3.1-py3-none-any.whl <span class="o">(</span><span class="m">19</span> kB<span class="o">)</span>
+Installing collected packages: sqlparse, pytz, asgiref, django
+Successfully installed asgiref-3.3.1 django-3.1.7 pytz-2021.1 sqlparse-0.4.1
+</pre></div>
+</div>
+<p>After DJANGO has been installed lets create a DJANGO project called <cite>netprog</cite></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We have decided to call this DJANGO project <code class="docutils literal notranslate"><span class="pre">netprog</span></code>, if you decide to change the name, keep note of the name since it will need to be changed in other places later.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>django-admin startproject netprog
+</pre></div>
+</div>
+<p>We can now safely exit the container.</p>
+<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 
 
@@ -280,8 +311,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../task2/index.html" class="btn btn-neutral float-right" title="Task #2: Integration with API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="step2.html" class="btn btn-neutral float-left" title="Step 2: Clone Repository" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step4.html" class="btn btn-neutral float-right" title="Step 4: Create Dockerfile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="step2.html" class="btn btn-neutral float-left" title="Step 2: Use IDE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
