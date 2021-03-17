@@ -19,10 +19,5 @@ Prerequisites
 - Basic programability experience 
 - Basic Linux commands
 - Basic GitHub experience 
+- Basic Docker experience
 - Have cisco any connect installed (optional)
-
-
-Objectives
-==========
-
-- ????

@@ -2,7 +2,7 @@ Step 2: Use IDE
 ###############
 
 Visual Studio Code
-------------------
+==================
 
 For this session we recommend to use Visual Studio Code (VSC) which is installed in your POD, to open your repo ``HOLPRG-2002`` in VSC follow the instructions:
 
