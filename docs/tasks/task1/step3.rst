@@ -50,4 +50,9 @@ After DJANGO has been installed lets create a DJANGO project called `netprog`
 
 We can now safely exit the container.
 
+.. code-block:: bash
+
+   root@5109156083d2:/app# exit
+
+
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

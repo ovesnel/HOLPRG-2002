@@ -2,7 +2,7 @@ Step 5: Build and Run Our Application Container
 ###############################################
 
 
-Now that our Dockerfile is ready, we will need to build and image using the Dockerfile, in order to do so execute the following command:
+Now that our Dockerfile is ready, we will need to build a Docker image using the Dockerfile, in order to do so execute the following command:
 
 .. code-block:: bash
 
