@@ -1,3 +1,14 @@
 .wy-nav-content {
     max-width: none;
 }
+
+div.code-block-caption {
+    color: #fcfcfc;
+    background-color: #297fb99c;
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    font-weight: bold;
+    text-align: left !important;
+    margin: 0;
+    padding: 10px 25px !important;
+}
