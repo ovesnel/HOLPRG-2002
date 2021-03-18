@@ -4,6 +4,7 @@ Step 3: Update View
 Now let’s update our interfaces/views.py to use the initial template:
 
 .. code-block:: Python
+    :caption: interfaces/views.py
     :linenos:
     :emphasize-lines: 20-24
 

@@ -17,8 +17,5 @@ To include the app in our project, we need to add a reference to its configurati
         'interfaces.apps.InterfacesConfig',
     ]
 
-.. literalinclude:: reference/initial-index.html
-    :language: html
-
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

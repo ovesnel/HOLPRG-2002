@@ -1,8 +1,9 @@
-##################################
-Task #4: Additional Frontend Logic
-##################################
+############################
+Task 4: Apply Customizations
+############################
 
-.. Next Table of Content is an example, please change the names according to your needs 
+
+Follow the next steps to apply portal customizations such as CSS, Icons, Buttons, Colors, etc.
 
 .. toctree::
 

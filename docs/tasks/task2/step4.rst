@@ -59,6 +59,7 @@ You should get an output similar to the one shown below with the interfaces info
 Update ``views.py`` to use the fuction to get infomation dinamically.
 
 .. code-block:: Python
+    :caption: interfaces/views.py
     :linenos:
     :emphasize-lines: 2
 
