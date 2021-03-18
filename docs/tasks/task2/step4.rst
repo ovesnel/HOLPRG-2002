@@ -56,4 +56,15 @@ You should get an output similar to the one shown below with the interfaces info
     [{'name': 'GigabitEthernet1', 'type': 'iana-if-type:ethernetCsmacd', 'enabled': True, 'ietf-ip:ipv4': {'address': [{'ip': '198.18.134.11', 'netmask': '255.255.192.0'}]}, 'ietf-ip:ipv6': {}}, {'name': 'GigabitEthernet2', 'description': 'This is GigabitEthernet 2', 'type': 'iana-if-type:ethernetCsmacd', 'enabled': False, 'ietf-ip:ipv4': {}, 'ietf-ip:ipv6': {}}]
 
 
+Update ``views.py`` to use the fuction to get infomation dinamically.
+
+.. code-block:: Python
+    :linenos:
+    :emphasize-lines: 2
+
+    def index(request):
+        interface_list = get_interfaces()
+        return HttpResponse(str(interface_list))
+
+
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
