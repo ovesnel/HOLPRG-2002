@@ -1,4 +1,4 @@
-Step 3: Update View To Use The HTML Template
+Step 2: Update View To Use The HTML Template
 ############################################
 
 Now let’s update our interfaces/views.py to use the initial template:
