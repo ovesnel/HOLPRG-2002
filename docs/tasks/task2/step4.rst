@@ -7,37 +7,11 @@ In order to complete this task, we will create a python module that retrieves in
 
 Lets create a file named ``device.py`` inside of our ``interfaces`` application:
 
-.. code-block:: python
+.. literalinclude:: reference/device.py
     :caption: interfaces/device.py
+    :language: python
     :linenos:
 
-    import requests
-
-
-    def get_interfaces(hostname="198.18.134.11", username="cisco", password="cisco"):
-        interfaces = []
-        url = f"https://{hostname}/restconf/data/ietf-interfaces:interfaces/interface"
-
-        headers = headers = {"Accept": "application/yang-data+json"}
-        try:
-            response = requests.request(
-                "GET",
-                url,
-                headers=headers,
-                auth=(username, password),
-                verify=False,
-            )
-
-            if response.ok:
-                interfaces = response.json().get("ietf-interfaces:interface", [])
-
-        except Exception as err:
-            print(f"There was an error getting interfaces: {err}")
-
-        return interfaces
-
-    if __name__ == "__main__":
-        print(get_interfaces())
 
 We can now run this module to test that we can fetch interfaces information from the device using **restconf**:
 
@@ -58,14 +32,11 @@ You should get an output similar to the one shown below with the interfaces info
 
 Update ``views.py`` to use the fuction to get infomation dinamically.
 
-.. code-block:: Python
+.. literalinclude:: reference/views.py
     :caption: interfaces/views.py
+    :language: python
     :linenos:
-    :emphasize-lines: 2
-
-    def index(request):
-        interface_list = get_interfaces()
-        return HttpResponse(str(interface_list))
+    :emphasize-lines: 4,10
 
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

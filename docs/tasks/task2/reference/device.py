@@ -23,5 +23,6 @@ def get_interfaces(hostname="198.18.134.11", username="cisco", password="cisco")
 
     return interfaces
 
+
 if __name__ == "__main__":
     print(get_interfaces())
