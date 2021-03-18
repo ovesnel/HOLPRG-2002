@@ -3,36 +3,16 @@ Step 3: Update View
 
 Now let’s update our interfaces/views.py to use the initial template:
 
-.. code-block:: Python
+.. literalinclude:: reference/views.py
     :caption: interfaces/views.py
+    :language: python
     :linenos:
-    :emphasize-lines: 20-24
+    :emphasize-lines: 2,11-15
 
-    from django.http import HttpResponse
-    from django.template import loader
+Head back to your browser and refresh the page.
+You should now see the device's interfaces in the form of an HTML table.
 
-    # Create your views here.
-
-
-    def index(request):
-        interface_list = [
-            {
-                "name": "GigabitEthernet1",
-                "description": "Description for Gi1",
-                "enabled": True,
-            },
-            {
-                "name": "GigabitEthernet2",
-                "description": "Description for Gi2",
-                "enabled": False,
-            },
-        ]
-        template = loader.get_template("interfaces/table.html")
-        context = {
-            "interface_list": interface_list,
-        }
-        return HttpResponse(template.render(context, request))
-
-
+.. image:: images/interfaces-table-view.png
+    :align: center
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
