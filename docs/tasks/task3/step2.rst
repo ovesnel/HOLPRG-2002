@@ -1,26 +1,10 @@
-Step 2: Update view
-###################
+Step 2: Create the table.html
+#############################
 
-Now let’s update our interfaces/views.py to use the template:
+Lets create a ``table.html`` file in the **interfaces/templates** directory (you have to create the directory), with the following contents:
 
-.. code-block:: Python
-
-    from django.shortcuts import render
-    from django.http import HttpResponse
-    from django.template import loader
-
-    from .models import Interface
-    # Create your views here.
-
-
-    def index(request):
-        interface_list = Interface.objects.all()
-        template = loader.get_template("interfaces/index.html")
-        context = {
-            "interface_list": interface_list,
-        }
-        return HttpResponse(template.render(context, request))
-
+.. literalinclude:: reference/table.html
+    :language: html
 
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

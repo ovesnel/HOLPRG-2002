@@ -1,6 +1,6 @@
-#################################
-Task #4: Add or Remove Interfaces
-#################################
+##################################
+Task #4: Additional Frontend Logic
+##################################
 
 .. Next Table of Content is an example, please change the names according to your needs 
 
