@@ -256,7 +256,7 @@
 <h1>Step 6: Using Docker Compose<a class="headerlink" href="#step-6-using-docker-compose" title="Permalink to this headline">¶</a></h1>
 <p>Docker provides utilities to simplify things with the use of Docker compose.
 With Docker compose, we define a YAML file with all the instructions to launch our application and execute just as single command to run the application.</p>
-<p>Lets create a docker-compose.yml file with the instructions on how to run our application:</p>
+<p>Lets create a <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file in the root of your repository with the instructions on how to run our application:</p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span> <span class="s">&quot;3.7&quot;</span>
 
 <span class="nt">services</span><span class="p">:</span>
@@ -269,7 +269,6 @@ With Docker compose, we define a YAML file with all the instructions to launch o
       <span class="p p-Indicator">-</span> <span class="s">&quot;80:80&quot;</span>
 </pre></div>
 </div>
-<p>Place this file in the root of your repository.</p>
 <p>Lets now start our container with docker-compose using the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose up
 </pre></div>

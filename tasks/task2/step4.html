@@ -282,10 +282,13 @@
 21
 22
 23
-24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+24
+25
+26
+27</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
 
-<span class="k">def</span> <span class="nf">get_interfaces</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">get_interfaces</span><span class="p">(</span><span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;198.18.134.11&quot;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s2">&quot;cisco&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;cisco&quot;</span><span class="p">):</span>
     <span class="n">interfaces</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{hostname}</span><span class="s2">/restconf/data/ietf-interfaces:interfaces/interface&quot;</span>
 
@@ -306,8 +309,22 @@
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There was an error getting interfaces: </span><span class="si">{err}</span><span class="s2">&quot;</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">interfaces</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">get_interfaces</span><span class="p">())</span>
 </pre></div>
 </td></tr></table></div>
+</div>
+<p>We can now run this module to test that we can fetch interfaces information from the device using <strong>restconf</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python interfaces/device.py
+</pre></div>
+</div>
+<p>You should get an output similar to the one shown below with the interfaces information encoded in JSON format:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@c22887e81072:/app# python interfaces/device.py
+/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host <span class="s1">&#39;198.18.134.11&#39;</span>. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+warnings.warn<span class="o">(</span>
+<span class="hll"><span class="o">[{</span><span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;GigabitEthernet1&#39;</span>, <span class="s1">&#39;type&#39;</span>: <span class="s1">&#39;iana-if-type:ethernetCsmacd&#39;</span>, <span class="s1">&#39;enabled&#39;</span>: True, <span class="s1">&#39;ietf-ip:ipv4&#39;</span>: <span class="o">{</span><span class="s1">&#39;address&#39;</span>: <span class="o">[{</span><span class="s1">&#39;ip&#39;</span>: <span class="s1">&#39;198.18.134.11&#39;</span>, <span class="s1">&#39;netmask&#39;</span>: <span class="s1">&#39;255.255.192.0&#39;</span><span class="o">}]}</span>, <span class="s1">&#39;ietf-ip:ipv6&#39;</span>: <span class="o">{}}</span>, <span class="o">{</span><span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;GigabitEthernet2&#39;</span>, <span class="s1">&#39;description&#39;</span>: <span class="s1">&#39;This is GigabitEthernet 2&#39;</span>, <span class="s1">&#39;type&#39;</span>: <span class="s1">&#39;iana-if-type:ethernetCsmacd&#39;</span>, <span class="s1">&#39;enabled&#39;</span>: False, <span class="s1">&#39;ietf-ip:ipv4&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;ietf-ip:ipv6&#39;</span>: <span class="o">{}}]</span>
+</span></pre></div>
 </div>
 <p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>

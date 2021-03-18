@@ -5,7 +5,7 @@ The first thing that needs to be done is to create an application for us to capt
 Each application you write in Django consists of a Python package that follows a certain convention.
 In our case we will call this application ``interfaces``
 
-To create it, let's open another terminal (without closing the one where docker-compose is running) and execute a shell into the exsiting container:
+To create it, let's open another terminal (**without closing the one where docker-compose is running**) and execute a shell into the exsiting container:
 
 .. code-block::
 

@@ -3,7 +3,7 @@ Step 1: Determining Data Structure
 
 The first step is to determine the data structure for the device's interfaces.
 
-In order to do so, we will use postman to connect to the device and obtain information about the interfaces.
+In order to do so, we will use **Postman** to connect to the device and obtain information about the interfaces.
 
 From the body of the response we obtain the following structure:
 

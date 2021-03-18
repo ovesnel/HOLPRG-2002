@@ -16,7 +16,6 @@ Lets create a ``requirements.txt`` in the root of our repository, with the follo
 
 We have specified two requirements, one is DJANGO, the other one which is requests will be needed when we need to query CSR1000v's APIs.
 We will included it now to avoid having to rebuild our image later.
-If anything changes in the requirements.txt file, we will have to rebuild our container.
-
+If anything changes in the ``requirements.txt`` file, we will have to rebuild our container.
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
