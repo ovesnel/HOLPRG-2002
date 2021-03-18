@@ -1,7 +1,7 @@
 .. _t2s3:
 
-Step 3: Create Interfaces HTML View
-###################################
+Step 3: Create Interfaces View
+##############################
 
 Now that our application is ready, lets create a Django view for it.
 The view, allows us to produce HTML code that will be presented to the user when they open the browser for our project.
