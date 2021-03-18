@@ -1,6 +1,6 @@
-############################
-Task 4: Apply Customizations
-############################
+#############################
+Task 4: Apply Cisco UI Styles
+#############################
 
 
 Follow the next steps to apply portal customizations such as CSS, Icons, Buttons, Colors, etc.
