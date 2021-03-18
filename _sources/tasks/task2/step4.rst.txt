@@ -7,37 +7,11 @@ In order to complete this task, we will create a python module that retrieves in
 
 Lets create a file named ``device.py`` inside of our ``interfaces`` application:
 
-.. code-block:: python
+.. literalinclude:: reference/device.py
     :caption: interfaces/device.py
+    :language: python
     :linenos:
 
-    import requests
-
-
-    def get_interfaces(hostname="198.18.134.11", username="cisco", password="cisco"):
-        interfaces = []
-        url = f"https://{hostname}/restconf/data/ietf-interfaces:interfaces/interface"
-
-        headers = headers = {"Accept": "application/yang-data+json"}
-        try:
-            response = requests.request(
-                "GET",
-                url,
-                headers=headers,
-                auth=(username, password),
-                verify=False,
-            )
-
-            if response.ok:
-                interfaces = response.json().get("ietf-interfaces:interface", [])
-
-        except Exception as err:
-            print(f"There was an error getting interfaces: {err}")
-
-        return interfaces
-
-    if __name__ == "__main__":
-        print(get_interfaces())
 
 We can now run this module to test that we can fetch interfaces information from the device using **restconf**:
 
@@ -54,6 +28,15 @@ You should get an output similar to the one shown below with the interfaces info
     /usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host '198.18.134.11'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
     warnings.warn(
     [{'name': 'GigabitEthernet1', 'type': 'iana-if-type:ethernetCsmacd', 'enabled': True, 'ietf-ip:ipv4': {'address': [{'ip': '198.18.134.11', 'netmask': '255.255.192.0'}]}, 'ietf-ip:ipv6': {}}, {'name': 'GigabitEthernet2', 'description': 'This is GigabitEthernet 2', 'type': 'iana-if-type:ethernetCsmacd', 'enabled': False, 'ietf-ip:ipv4': {}, 'ietf-ip:ipv6': {}}]
+
+
+Update ``views.py`` to use the fuction to get infomation dinamically.
+
+.. literalinclude:: reference/views.py
+    :caption: interfaces/views.py
+    :language: python
+    :linenos:
+    :emphasize-lines: 4,10
 
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

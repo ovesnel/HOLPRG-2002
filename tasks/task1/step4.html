@@ -108,7 +108,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tasks</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Task #1: Setup Development Environment</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Task 1: Setup Development Environment</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="step1.html">Step 1: Clone Repository</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Use IDE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step3.html">Step 3: Setup DJANGO Project</a></li>
@@ -117,30 +117,21 @@
 <li class="toctree-l3"><a class="reference internal" href="step6.html">Step 6: Using Docker Compose</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../task2/index.html">Task #2: Obtaining Device Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../task2/index.html">Task 2: Build Backend Logic</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../task2/step1.html">Step 1: Determining Data Structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../task2/step2.html">Step 2: Create a Django Application</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../task2/step3.html">Step 3: Create Interfaces HTML View</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../task2/step4.html">Step 4: Obtain Device’s Information Dynamically</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../task3/index.html">Task #3: Build UI Logic</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../task3/step1.html">Step #1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../task3/step1.html#sub-title">Sub-Title</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../task3/index.html">Task 3: Build Frontend Logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../task3/step1.html">Step 1: Activate Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../task3/step2.html">Step 2: Create the table.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../task3/step3.html">Step 3: Update View</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../task3/step2.html">Step #2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../task3/step2.html#sub-title">Sub-Title</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../task3/step3.html">Step #3</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../task3/step3.html#sub-title">Sub-Title</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../task4/index.html">Task #4: Add or Remove Interfaces</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../task4/step1.html">Step #1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../task4/index.html">Task 4: Apply Customizations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../task4/step1.html">Step #1: Apply Cisco UI Kit</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../task4/step1.html#sub-title">Sub-Title</a></li>
 </ul>
 </li>
@@ -154,12 +145,12 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../task5/index.html">Task #5: Apply Customizations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../task5/step1.html">Step #1: Apply Cisco UI Kit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../task5/index.html">Task 5: Additional Frontend Logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../task5/step1.html">Step 1: Split Between Read-Only and Read-Write Interfaces</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../task5/step1.html#sub-title">Sub-Title</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../task5/step2.html">Step #2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../task5/step2.html">Step 2: Add Enbale/Disable Button</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../task5/step2.html#sub-title">Sub-Title</a></li>
 </ul>
 </li>
@@ -229,7 +220,7 @@
         
           <li><a href="../index.html">Tasks</a> &raquo;</li>
         
-          <li><a href="index.html">Task #1: Setup Development Environment</a> &raquo;</li>
+          <li><a href="index.html">Task 1: Setup Development Environment</a> &raquo;</li>
         
       <li>Step 4: Create Dockerfile</li>
     
@@ -256,7 +247,24 @@
 <h1>Step 4: Create Dockerfile<a class="headerlink" href="#step-4-create-dockerfile" title="Permalink to this headline">¶</a></h1>
 <p>We will now create a <cite>Dockerfile</cite>, this is required in order for us to run our DJANGO application as a container (this ensures that we get the same result independent of the underlying operating system).</p>
 <p>Copy the following code to a file called <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> in the root of our repository.</p>
-<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">FROM</span> <span class="s">python:3-slim-buster</span>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Dockerfile</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-Dockerfile notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">FROM</span> <span class="s">python:3-slim-buster</span>
 
 <span class="c"># Create the /app directory an set it as the default workspace</span>
 <span class="k">WORKDIR</span><span class="s"> /app</span>
@@ -273,12 +281,17 @@
 <span class="c"># Upon container start, lets run DJANGO manage.py on port 80</span>
 <span class="k">CMD</span> <span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;manage.py&quot;</span><span class="p">,</span> <span class="s2">&quot;runserver&quot;</span><span class="p">,</span> <span class="s2">&quot;0.0.0.0:80&quot;</span><span class="p">]</span>
 </pre></div>
+</td></tr></table></div>
 </div>
 <p>After our Dockerfile is completed, we will need to create the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> referenced in our Dockerfile.</p>
 <p>Lets create a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> in the root of our repository, with the following contents:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Django</span><span class="o">==</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">7</span>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">requirements.txt</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">Django</span><span class="o">==</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">7</span>
 <span class="n">requests</span><span class="o">==</span><span class="mf">2.25</span><span class="o">.</span><span class="mi">1</span>
 </pre></div>
+</td></tr></table></div>
 </div>
 <p>We have specified two requirements, one is DJANGO, the other one which is requests will be needed when we need to query CSR1000v’s APIs.
 We will included it now to avoid having to rebuild our image later.
