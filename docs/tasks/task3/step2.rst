@@ -1,5 +1,5 @@
-Step 2: Create the table.html
-#############################
+Step 2: Create the HTML template
+################################
 
 Lets create a ``table.html`` file in the **interfaces/templates** directory (you have to create the directory), with the following contents:
 
