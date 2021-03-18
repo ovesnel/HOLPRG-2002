@@ -8,4 +8,3 @@ Task 3: Build Frontend Logic
 
    step1
    step2
-   step3

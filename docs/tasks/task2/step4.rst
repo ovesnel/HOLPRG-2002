@@ -38,5 +38,7 @@ Update ``views.py`` to use the fuction to get infomation dinamically.
     :linenos:
     :emphasize-lines: 4,10
 
+Go back to your browser and refresh the page.
+You should see the interfaces information in **JSON** format.
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
