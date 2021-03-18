@@ -1,6 +1,6 @@
-#######################
-Task #3: Build UI Logic
-#######################
+############################
+Task 3: Build Frontend Logic
+############################
 
 .. Next Table of Content is an example, please change the names according to your needs 
 

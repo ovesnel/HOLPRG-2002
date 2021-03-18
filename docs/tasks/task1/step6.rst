@@ -8,6 +8,8 @@ Lets create a ``docker-compose.yml`` file in the root of your repository with th
 
 .. literalinclude:: reference/docker-compose.yaml
    :language: YAML
+   :caption: docker-compose.yaml
+   :linenos:
 
 Lets now start our container with docker-compose using the following command:
 

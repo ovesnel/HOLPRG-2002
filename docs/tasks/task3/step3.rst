@@ -1,9 +1,37 @@
-Step #3
-#######
+Step 3: Update View
+###################
 
-Sub-Title
----------
+Now let’s update our interfaces/views.py to use the initial template:
 
+.. code-block:: Python
+    :caption: interfaces/views.py
+    :linenos:
+    :emphasize-lines: 20-24
+
+    from django.http import HttpResponse
+    from django.template import loader
+
+    # Create your views here.
+
+
+    def index(request):
+        interface_list = [
+            {
+                "name": "GigabitEthernet1",
+                "description": "Description for Gi1",
+                "enabled": True,
+            },
+            {
+                "name": "GigabitEthernet2",
+                "description": "Description for Gi2",
+                "enabled": False,
+            },
+        ]
+        template = loader.get_template("interfaces/table.html")
+        context = {
+            "interface_list": interface_list,
+        }
+        return HttpResponse(template.render(context, request))
 
 
 

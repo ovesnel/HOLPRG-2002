@@ -23,6 +23,7 @@ test-local-docs:
 
 .PHONY: show-local-docs
 show-local-docs:
+	rm -rf build || true
 	docker run -it --rm -p 8000:8000 -w /repo -v `PWD`:/repo \
 		-e SOURCEDIR=$(SOURCEDIR) \
 		-e BUILDDIR=$(BUILDDIR) \
