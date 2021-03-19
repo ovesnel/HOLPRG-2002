@@ -16,5 +16,5 @@ COPY ./netprog .
 RUN chgrp -R 1000 /app && \
    chmod -R g+rwX /app
 
-# Upon container start, lets run DJANGO manage.py on port 80
+# Upon container start, lets run DJANGO manage.py on port 8080
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8080"]

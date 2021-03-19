@@ -6,11 +6,11 @@ WORKDIR /app
 # Copy the requirements.txt file inside the container
 COPY requirements.txt .
 
-# Install python requirements to ensure DJANGO is installed
+# Install python requirements to ensure Django is installed
 RUN pip install -r requirements.txt --no-cache-dir
 
-# Copy the contents of our DJANGO project into /app directory inside the container
+# Copy the contents of our Django project into /app directory inside the container
 COPY ./netprog .
 
-# Upon container start, lets run DJANGO manage.py on port 80
+# Upon container start, lets run Django manage.py on port 8080
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8080"]

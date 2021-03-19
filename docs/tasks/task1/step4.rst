@@ -1,7 +1,7 @@
 Step 4: Create Dockerfile
 #########################
 
-We will now create a `Dockerfile`, this is required in order for us to run our DJANGO application as a container (this ensures that we get the same result independent of the underlying operating system).
+We will now create a `Dockerfile`, this is required in order for us to run our Django application as a container (this ensures that we get the same result independent of the underlying operating system).
 
 Copy the following code to a file called ``Dockerfile`` in the root of our repository.
 
@@ -18,7 +18,7 @@ Let's create a ``requirements.txt`` in the root of our repository, with the foll
    :caption: requirements.txt
    :linenos:
 
-We have specified two requirements, one is DJANGO, the other one which is requests will be needed to query the CSR1000v's APIs.
+We have specified two requirements, one is Django, the other one which is requests will be needed to query the CSR1000v's APIs.
 We will included it now to avoid having to rebuild our image later.
 If anything changes in the ``requirements.txt`` file, we will have to rebuild our Docker image.
 
