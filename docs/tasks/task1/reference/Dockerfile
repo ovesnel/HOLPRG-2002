@@ -13,4 +13,4 @@ RUN pip install -r requirements.txt --no-cache-dir
 COPY ./netprog .
 
 # Upon container start, lets run DJANGO manage.py on port 80
-CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8080"]
