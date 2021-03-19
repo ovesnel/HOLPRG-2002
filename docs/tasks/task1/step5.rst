@@ -67,7 +67,7 @@ Open your browser and go to http://localhost. You should see the following page 
     :width: 75%
     :align: center
 
-Lets now stop our application and container by pressing ``^C``.
+Lets now stop our application and container by pressing :kbd:`ctrl` + :kbd:`C`.
 
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
