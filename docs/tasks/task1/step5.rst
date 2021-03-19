@@ -38,14 +38,13 @@ The following is a sample output from the above command:
    Successfully built 247a6e234903
    Successfully tagged holprg2002:latest
 
-Now that we have a container image with our application, lets run the container with our application with the following command:
+Now that we have a container image with our application, let's run the container with the following command:
 
 .. code-block:: bash
 
    docker run -it -u 1000 --rm -p 80:8080 -v $PWD/netprog:/app -w /app holprg2002
 
 After executing the above command you will see the application start and the server will be listening in port 80.
-To stop the application and thus stop the container, press ``^C``.
 
 .. code-block::
 
@@ -62,13 +61,13 @@ To stop the application and thus stop the container, press ``^C``.
    Starting development server at http://0.0.0.0:8080/
    Quit the server with CONTROL-C.
 
-Open your browser and go to http://localhost and you should see the following page loaded:
+Open your browser and go to http://localhost. You should see the following page loaded:
 
 .. image:: images/django-welcome-page.png
     :width: 75%
     :align: center
 
-Lets now stop our server by pressing ``^C``
+Lets now stop our application and container by pressing ``^C``.
 
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

@@ -43,7 +43,7 @@ The following is the expected output after executing the command.
     Installing collected packages: sqlparse, pytz, asgiref, django
     Successfully installed asgiref-3.3.1 django-3.1.7 pytz-2021.1 sqlparse-0.4.1
 
-After DJANGO has been installed lets create a DJANGO project called `netprog`
+After DJANGO has been installed let's create a DJANGO project called `netprog`
 
 .. Note ::
 

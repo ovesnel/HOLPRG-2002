@@ -1,4 +1,4 @@
-Step 2: Add Enbale/Disable Button
+Step 2: Add Enable/Disable Button
 #################################
 
 

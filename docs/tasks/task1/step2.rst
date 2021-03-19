@@ -16,7 +16,7 @@ Visual Studio Code is installed in your POD, to open your repo ``HOLPRG-2002``, 
 
 
 Once Visual Studio Code is open, we recommend using the integrate terminal.
-To launch it, click on the icons as shown on the following screenshot.
+To launch it, click the icons as shown on the following screenshot.
 
 .. image:: images/vsc-terminal.png
     :width: 75%

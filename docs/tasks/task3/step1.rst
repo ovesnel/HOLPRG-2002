@@ -1,7 +1,7 @@
 Step 1: Create the HTML template
 ################################
 
-Lets create a ``table.html`` file in the **interfaces/templates** directory (you have to create the directory), with the following contents:
+Let's create a ``table.html`` file in the ``interfaces/templates/interfaces`` directory (you have to create the directories), with the following content:
 
 .. literalinclude:: reference/table.html
     :caption: interfaces/templates/interfaces/table.html
