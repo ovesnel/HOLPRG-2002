@@ -1,7 +1,7 @@
-Step 2: Add Customizations to Django
-####################################
+Step 2: Adjust Django Settings to Serve Static Files
+####################################################
 
-Add an entry at the beginning of **netprog/settings.py** to ``import os`` library
+Add an entry at the beginning of the ``netprog/settings.py`` file to ``import os`` library:
 
 .. code-block:: python
     :caption: netprog/settings.py
@@ -23,7 +23,7 @@ Add an entry at the beginning of **netprog/settings.py** to ``import os`` librar
     from pathlib import Path
 
 
-Add an entry at the end of **netprog/settings.py** to include ``STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)``
+Add an entry at the end of the ``netprog/settings.py`` to include ``STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)``:
 
 .. code-block:: python
     :caption: netprog/settings.py

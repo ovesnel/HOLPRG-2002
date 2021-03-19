@@ -12,14 +12,14 @@ Copy the following code to a file called ``Dockerfile`` in the root of our repos
 
 After our Dockerfile is completed, we will need to create the ``requirements.txt`` referenced in our Dockerfile.
 
-Lets create a ``requirements.txt`` in the root of our repository, with the following contents:
+Let's create a ``requirements.txt`` in the root of our repository, with the following contents:
 
 .. literalinclude:: reference/requirements.txt
    :caption: requirements.txt
    :linenos:
 
-We have specified two requirements, one is DJANGO, the other one which is requests will be needed when we need to query CSR1000v's APIs.
+We have specified two requirements, one is DJANGO, the other one which is requests will be needed to query the CSR1000v's APIs.
 We will included it now to avoid having to rebuild our image later.
-If anything changes in the ``requirements.txt`` file, we will have to rebuild our container.
+If anything changes in the ``requirements.txt`` file, we will have to rebuild our Docker image.
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

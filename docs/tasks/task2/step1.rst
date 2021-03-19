@@ -7,7 +7,7 @@ In order to do so, we will use **Postman** to connect to the device and obtain i
 
 To do so, from the Postman :guilabel:`Import` then select :guilabel:`Folder` and choose the folder ``HOLPRG-2002/postman/CL2021-HOLPRG-2002.postman_collection.json`` finally :guilabel:`Import` option to import the collection.
 
-You should see a collection called **CL2021-HOLPRG-2002**, under this collection select the option ``GET Interfaces`` and click in :guilabel:`Send` option.
+You should see a collection called **CL2021-HOLPRG-2002**, under this collection select the option ``GET Interfaces`` and click the :guilabel:`Send` button.
 
 From the body of the response we obtain the following structure:
 

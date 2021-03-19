@@ -1,7 +1,7 @@
 Step 2: Update View To Use The HTML Template
 ############################################
 
-Now let’s update our interfaces/views.py to use the initial template:
+Now let’s update our ``interfaces/views.py`` to use the initial template:
 
 .. literalinclude:: reference/views.py
     :caption: interfaces/views.py

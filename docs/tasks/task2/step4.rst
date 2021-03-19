@@ -5,7 +5,7 @@ On :ref:`t2s3` we created the interface list manually, in this step we will retr
 
 In order to complete this task, we will create a python module that retrieves information via restconf using python **requests** package.
 
-Lets create a file named ``device.py`` inside of our ``interfaces`` application:
+Let's create a file named ``device.py`` inside of our ``interfaces`` application:
 
 .. literalinclude:: reference/device.py
     :caption: interfaces/device.py
@@ -30,7 +30,7 @@ You should get an output similar to the one shown below with the interfaces info
     [{'name': 'GigabitEthernet1', 'type': 'iana-if-type:ethernetCsmacd', 'enabled': True, 'ietf-ip:ipv4': {'address': [{'ip': '198.18.134.11', 'netmask': '255.255.192.0'}]}, 'ietf-ip:ipv6': {}}, {'name': 'GigabitEthernet2', 'description': 'This is GigabitEthernet 2', 'type': 'iana-if-type:ethernetCsmacd', 'enabled': False, 'ietf-ip:ipv4': {}, 'ietf-ip:ipv6': {}}]
 
 
-Update ``views.py`` to use the fuction to get infomation dinamically.
+Update ``views.py`` to use the fuction to get interfaces infomation dynamically.
 
 .. literalinclude:: reference/views.py
     :caption: interfaces/views.py
