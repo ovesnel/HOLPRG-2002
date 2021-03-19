@@ -3,13 +3,18 @@
     <tr>
         <th>Name</th>
         <th>Description</th>
-        <th>Enabled</th>
+        <th class="text-center">Enabled</th>
+        <th class="text-center">Action</th>
     </tr>
     {% for interface in interface_list %}
     <tr>
         <td>{{ interface.name }}</td>
         <td>{{ interface.description }}</td>
-        <td>{{ interface.enabled }}</td>
+        {% if interface.enabled %}
+        <td class="text-center"><span class="icon-check text-success"></span></td>
+        {% else %}
+        <td class="text-center"><span class="icon-close text-danger"></span></td>
+        {% endif %}
     </tr>
     {% endfor %}
 </table>
