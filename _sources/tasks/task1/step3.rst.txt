@@ -1,29 +1,34 @@
-Step 3: Setup DJANGO Project
+Step 3: Setup Django Project
 ############################
 
 The first thing we need to do is to create a new DJANGO project, in order to do so, we will start a container with Python 3 and install DJANGO library.
 
-
 The following docker commands will allow you to start a container from **python:3-slim-buster** image and executing a **bash** prompt.
 The `-v` and `-w` switches allow us to map the local folder into the container in the `/app` directory and set the default workspace to `/app`.
 
+From Visual Studio Code's terminal execute the following command:
+
 .. code-block:: bash
 
-    cd ~/HOLPRG-2002
-    docker run -it --rm -v $PWD:/app -w /app python:3-slim-buster bash
+    docker run -it -u 1000 --rm -v $PWD:/app -w /app python:3-slim-buster bash
 
 
 Once we have a bash prompt inside the container, let's install django using Python's package manager.
+In order to accomplish this, we will first create a virtual environment and activate it.
 
 .. code-block:: bash
 
+    python -m venv .venv
+    source .venv/bin/activate
     pip install django
 
 The following is the expected output after executing the command.
 
 .. code-block:: bash
 
-    root@e0b3a8214a19:/app# pip install django
+    I have no name!@796136e1b951:/app$ python -m venv .venv
+    I have no name!@796136e1b951:/app$ source .venv/bin/activate
+    I have no name!@796136e1b951:/app# pip install django
     Collecting django
     Downloading Django-3.1.7-py3-none-any.whl (7.8 MB)
     |████████████████████████████████| 7.8 MB 3.8 MB/s 

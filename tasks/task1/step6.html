@@ -110,8 +110,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tasks</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Task 1: Setup Development Environment</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="step1.html">Step 1: Clone Repository</a></li>
-<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Use IDE</a></li>
-<li class="toctree-l3"><a class="reference internal" href="step3.html">Step 3: Setup DJANGO Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Launch Visual Studio Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step3.html">Step 3: Setup Django Project</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step4.html">Step 4: Create Dockerfile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step5.html">Step 5: Build and Run Our Application Container</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Step 6: Using Docker Compose</a></li>
@@ -250,16 +250,18 @@ With Docker compose, we define a YAML file with all the instructions to launch o
  7
  8
  9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span> <span class="s">&quot;3.7&quot;</span>
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span> <span class="s">&quot;3.7&quot;</span>
 
 <span class="nt">services</span><span class="p">:</span>
   <span class="nt">app</span><span class="p">:</span>
     <span class="nt">build</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
+    <span class="nt">user</span><span class="p">:</span> <span class="s">&quot;1000&quot;</span>
     <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">holprg2002</span>
     <span class="nt">volumes</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">./netprog:/app</span>
     <span class="nt">ports</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="s">&quot;80:80&quot;</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;80:8080&quot;</span>
 </pre></div>
 </td></tr></table></div>
 </div>

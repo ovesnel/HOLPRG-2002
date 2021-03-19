@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Step 3: Setup DJANGO Project &mdash; HOLPRG-2002  documentation</title>
+  <title>Step 3: Setup Django Project &mdash; HOLPRG-2002  documentation</title>
   
 
   
@@ -44,7 +44,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Step 4: Create Dockerfile" href="step4.html" />
-    <link rel="prev" title="Step 2: Use IDE" href="step2.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
+    <link rel="prev" title="Step 2: Launch Visual Studio Code" href="step2.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -110,8 +110,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tasks</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Task 1: Setup Development Environment</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="step1.html">Step 1: Clone Repository</a></li>
-<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Use IDE</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 3: Setup DJANGO Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Launch Visual Studio Code</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 3: Setup Django Project</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step4.html">Step 4: Create Dockerfile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step5.html">Step 5: Build and Run Our Application Container</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step6.html">Step 6: Using Docker Compose</a></li>
@@ -213,7 +213,7 @@
         
           <li><a href="index.html">Task 1: Setup Development Environment</a> &raquo;</li>
         
-      <li>Step 3: Setup DJANGO Project</li>
+      <li>Step 3: Setup Django Project</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -235,20 +235,25 @@
            <div itemprop="articleBody">
             
   <div class="section" id="step-3-setup-django-project">
-<h1>Step 3: Setup DJANGO Project<a class="headerlink" href="#step-3-setup-django-project" title="Permalink to this headline">¶</a></h1>
+<h1>Step 3: Setup Django Project<a class="headerlink" href="#step-3-setup-django-project" title="Permalink to this headline">¶</a></h1>
 <p>The first thing we need to do is to create a new DJANGO project, in order to do so, we will start a container with Python 3 and install DJANGO library.</p>
 <p>The following docker commands will allow you to start a container from <strong>python:3-slim-buster</strong> image and executing a <strong>bash</strong> prompt.
 The <cite>-v</cite> and <cite>-w</cite> switches allow us to map the local folder into the container in the <cite>/app</cite> directory and set the default workspace to <cite>/app</cite>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/HOLPRG-2002
-docker run -it --rm -v <span class="nv">$PWD</span>:/app -w /app python:3-slim-buster bash
+<p>From Visual Studio Code’s terminal execute the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it -u <span class="m">1000</span> --rm -v <span class="nv">$PWD</span>:/app -w /app python:3-slim-buster bash
 </pre></div>
 </div>
-<p>Once we have a bash prompt inside the container, let’s install django using Python’s package manager.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install django
+<p>Once we have a bash prompt inside the container, let’s install django using Python’s package manager.
+In order to accomplish this, we will first create a virtual environment and activate it.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m venv .venv
+<span class="nb">source</span> .venv/bin/activate
+pip install django
 </pre></div>
 </div>
 <p>The following is the expected output after executing the command.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@e0b3a8214a19:/app# pip install django
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>I have no name!@796136e1b951:/app$ python -m venv .venv
+I have no name!@796136e1b951:/app$ <span class="nb">source</span> .venv/bin/activate
+I have no name!@796136e1b951:/app# pip install django
 Collecting django
 Downloading Django-3.1.7-py3-none-any.whl <span class="o">(</span><span class="m">7</span>.8 MB<span class="o">)</span>
 <span class="p">|</span>████████████████████████████████<span class="p">|</span> <span class="m">7</span>.8 MB <span class="m">3</span>.8 MB/s
@@ -286,7 +291,7 @@ Successfully installed asgiref-3.3.1 django-3.1.7 pytz-2021.1 sqlparse-0.4.1
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="step4.html" class="btn btn-neutral float-right" title="Step 4: Create Dockerfile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="step2.html" class="btn btn-neutral float-left" title="Step 2: Use IDE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step2.html" class="btn btn-neutral float-left" title="Step 2: Launch Visual Studio Code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

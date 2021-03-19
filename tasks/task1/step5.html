@@ -110,8 +110,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tasks</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Task 1: Setup Development Environment</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="step1.html">Step 1: Clone Repository</a></li>
-<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Use IDE</a></li>
-<li class="toctree-l3"><a class="reference internal" href="step3.html">Step 3: Setup DJANGO Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Launch Visual Studio Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step3.html">Step 3: Setup Django Project</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step4.html">Step 4: Create Dockerfile</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Step 5: Build and Run Our Application Container</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step6.html">Step 6: Using Docker Compose</a></li>
@@ -242,56 +242,39 @@
 </div>
 <p>The following is a sample output from the above command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[cisco@centos HOLPRG-2002]$ docker build . -t holprg2002
-Sending build context to Docker daemon   21.7MB
-Step 1/6 : FROM python:3-slim-buster
+Sending build context to Docker daemon  71.68MB
+Step 1/7 : FROM python:3-slim-buster
 ---&gt; b2b5367cdfd4
-Step 2/6 : WORKDIR /app
----&gt; Running in 3824348cdccc
-Removing intermediate container 3824348cdccc
----&gt; ffc346252616
-Step 3/6 : COPY requirements.txt .
----&gt; 3954761e5349
-Step 4/6 : RUN pip install -r requirements.txt --no-cache-dir
----&gt; Running in 6daeb0e7de3e
-Collecting Django==3.1.7
-Downloading Django-3.1.7-py3-none-any.whl (7.8 MB)
-Collecting requests==2.25.1
-Downloading requests-2.25.1-py2.py3-none-any.whl (61 kB)
-Collecting pytz
-Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)
-Collecting sqlparse&gt;=0.2.2
-Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
-Collecting asgiref&lt;4,&gt;=3.2.10
-Downloading asgiref-3.3.1-py3-none-any.whl (19 kB)
-Collecting idna&lt;3,&gt;=2.5
-Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
-Collecting chardet&lt;5,&gt;=3.0.2
-Downloading chardet-4.0.0-py2.py3-none-any.whl (178 kB)
-Collecting urllib3&lt;1.27,&gt;=1.21.1
-Downloading urllib3-1.26.4-py2.py3-none-any.whl (153 kB)
-Collecting certifi&gt;=2017.4.17
-Downloading certifi-2020.12.5-py2.py3-none-any.whl (147 kB)
-Installing collected packages: urllib3, sqlparse, pytz, idna, chardet, certifi, asgiref, requests, Django
-Successfully installed Django-3.1.7 asgiref-3.3.1 certifi-2020.12.5 chardet-4.0.0 idna-2.10 pytz-2021.1 requests-2.25.1 sqlparse-0.4.1 urllib3-1.26.4
-Removing intermediate container 6daeb0e7de3e
----&gt; 4cdc330ed00e
-Step 5/6 : COPY ./netprog .
----&gt; c299749182a2
-Step 6/6 : CMD [&quot;python&quot;, &quot;manage.py&quot;, &quot;runserver&quot;, &quot;0.0.0.0:80&quot;]
----&gt; Running in b5b265ecf055
-Removing intermediate container b5b265ecf055
----&gt; c431419578ef
-Successfully built c431419578ef
+Step 2/7 : WORKDIR /app
+---&gt; Using cache
+---&gt; 53b824823ab5
+Step 3/7 : COPY requirements.txt .
+---&gt; Using cache
+---&gt; c54c097d8d9c
+Step 4/7 : RUN pip install -r requirements.txt --no-cache-dir
+---&gt; Using cache
+---&gt; 4cd369b916dd
+Step 5/7 : COPY ./netprog .
+---&gt; daa96094c69e
+Step 6/7 : RUN chgrp -R 1000 /app &amp;&amp;    chmod -R g+rwX /app
+---&gt; Running in 4319cea0e80d
+Removing intermediate container 4319cea0e80d
+---&gt; a0db22be858c
+Step 7/7 : CMD [&quot;python&quot;, &quot;manage.py&quot;, &quot;runserver&quot;, &quot;0.0.0.0:8080&quot;]s
+---&gt; Running in 6e747ac80f78
+Removing intermediate container 6e747ac80f78
+---&gt; 247a6e234903
+Successfully built 247a6e234903
 Successfully tagged holprg2002:latest
 </pre></div>
 </div>
 <p>Now that we have a container image with our application, lets run the container with our application with the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it --rm -p <span class="m">80</span>:80 -v <span class="nv">$PWD</span>/netprog:/app -w /app holprg2002
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it -u <span class="m">1000</span> --rm -p <span class="m">80</span>:8080 -v <span class="nv">$PWD</span>/netprog:/app -w /app holprg2002
 </pre></div>
 </div>
 <p>After executing the above command you will see the application start and the server will be listening in port 80.
 To stop the application and thus stop the container, press <code class="docutils literal notranslate"><span class="pre">^C</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[cisco@centos HOLPRG-2002]$ docker run -it --rm -p 80:80 -v $PWD/netprog:/app -w /app holprg2002
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[cisco@centos HOLPRG-2002]$ docker run -it -u 1000 --rm -p 80:8080 -v $PWD/netprog:/app -w /app holprg2002
 Watching for file changes with StatReloader
 Performing system checks...
 
@@ -301,7 +284,7 @@ You have 18 unapplied migration(s). Your project may not work properly until you
 Run &#39;python manage.py migrate&#39; to apply them.
 March 17, 2021 - 19:48:45
 Django version 3.1.7, using settings &#39;netprog.settings&#39;
-Starting development server at http://0.0.0.0:80/
+Starting development server at http://0.0.0.0:8080/
 Quit the server with CONTROL-C.
 </pre></div>
 </div>
