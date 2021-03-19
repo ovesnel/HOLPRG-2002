@@ -16,7 +16,7 @@ Let's first extract our existing logic for the ``<tr>`` (table's interface row) 
     :language: html
     :linenos:
 
-We will now create a simplified version (without the enable/disable button) for our management interface, we will name this file :guilabel:`management_interface.html` and it will have the following contents:
+We will now create a simplified version (without the :guilabel:`Enable`/:guilabel:`Disable` button) for our management interface, we will name this file :guilabel:`management_interface.html` and it will have the following contents:
 
 .. literalinclude:: reference/management_interface.html
     :caption: interfaces/templates/interfaces/management_interface.html
@@ -40,5 +40,12 @@ We will now replace the ``<tr>`` inside :guilabel:`table.html` with a Django tem
     </tr>
     {% endfor %}
 
+If we refresh our website, it will now look like this:
+
+.. image:: images/interface-table-no-action.png
+    :align: center
+
+
+Pressing the :guilabel:`Enable`/:guilabel:`Disable` button will have no effect, we will add the logic for that in our next step.
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
