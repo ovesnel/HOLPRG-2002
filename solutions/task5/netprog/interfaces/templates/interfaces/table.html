@@ -1,24 +1,19 @@
-<form action="{% url 'interfaces' %}" method="post">
-    {% csrf_token %}
-    <table class="table table--striped">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th class="text-center hidden-xs-down">Enabled</th>
-                <th class="text-center hidden-xs-down">Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for interface in interface_list %}
-            <tr>
-                {% if interface.name == "GigabitEthernet1" %}
-                {% include "./read_only_interface.html" %}
-                {% else %}
-                {% include "./read_write_interface.html" %}
-                {% endif %}
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</form>
+{% if interface_list %}
+<table class="table table--striped">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th class="text-center">Enabled</th>
+        <th class="text-center">Action</th>
+    </tr>
+    {% for interface in interface_list %}
+    {% if interface.name == "GigabitEthernet1" %}
+    {% include "./management_interface.html" %}
+    {% else %}
+    {% include "./interface.html" %}
+    {% endif %}
+    {% endfor %}
+</table>
+{% else %}
+<p>No interfaces are available.</p>
+{% endif %}
