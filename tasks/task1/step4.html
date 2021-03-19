@@ -220,7 +220,7 @@
         
           
             
-              <a href="https://https://github.com//userlerueda/HOLPRG-2002/blob/master/docs/tasks/task1/step4.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://https://github.com//CiscsoLive2021/HOLPRG-2002/blob/master/docs/tasks/task1/step4.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -236,7 +236,7 @@
             
   <div class="section" id="step-4-create-dockerfile">
 <h1>Step 4: Create Dockerfile<a class="headerlink" href="#step-4-create-dockerfile" title="Permalink to this headline">¶</a></h1>
-<p>We will now create a <cite>Dockerfile</cite>, this is required in order for us to run our DJANGO application as a container (this ensures that we get the same result independent of the underlying operating system).</p>
+<p>We will now create a <cite>Dockerfile</cite>, this is required in order for us to run our Django application as a container (this ensures that we get the same result independent of the underlying operating system).</p>
 <p>Copy the following code to a file called <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> in the root of our repository.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Dockerfile</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
@@ -263,13 +263,13 @@
 <span class="c"># Copy the requirements.txt file inside the container</span>
 <span class="k">COPY</span> requirements.txt .
 
-<span class="c"># Install python requirements to ensure DJANGO is installed</span>
+<span class="c"># Install python requirements to ensure Django is installed</span>
 <span class="k">RUN</span> pip install -r requirements.txt --no-cache-dir
 
-<span class="c"># Copy the contents of our DJANGO project into /app directory inside the container</span>
+<span class="c"># Copy the contents of our Django project into /app directory inside the container</span>
 <span class="k">COPY</span> ./netprog .
 
-<span class="c"># Upon container start, lets run DJANGO manage.py on port 80</span>
+<span class="c"># Upon container start, lets run Django manage.py on port 8080</span>
 <span class="k">CMD</span> <span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;manage.py&quot;</span><span class="p">,</span> <span class="s2">&quot;runserver&quot;</span><span class="p">,</span> <span class="s2">&quot;0.0.0.0:8080&quot;</span><span class="p">]</span>
 </pre></div>
 </td></tr></table></div>
@@ -284,7 +284,7 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>We have specified two requirements, one is DJANGO, the other one which is requests will be needed to query the CSR1000v’s APIs.
+<p>We have specified two requirements, one is Django, the other one which is requests will be needed to query the CSR1000v’s APIs.
 We will included it now to avoid having to rebuild our image later.
 If anything changes in the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file, we will have to rebuild our Docker image.</p>
 <p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>

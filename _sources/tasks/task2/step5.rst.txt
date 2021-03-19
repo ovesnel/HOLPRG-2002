@@ -1,7 +1,7 @@
 Step 5: Activate Application
 ############################
 
-To include the app in our project, we need to add a reference to its configuration class in the **INSTALLED_APPS** setting. The Config class is in the ``interfaces/apps.py`` file, so its dotted path is 'interfaces.apps.interfacesConfig'. Edit the ``netprog/settings.py`` file and add that dotted path to the INSTALLED_APPS setting. It’ll look like this:
+To include the app in our project, we need to add a reference to its configuration class in the ``INSTALLED_APPS`` setting. The Config class is in the :guilabel:`interfaces/apps.py` file, so its dotted path is 'interfaces.apps.interfacesConfig'. Edit the ``netprog/settings.py`` file and add that dotted path to the INSTALLED_APPS setting. It’ll look like this:
 
 .. code-block:: Python
     :caption: netprog/settings.py

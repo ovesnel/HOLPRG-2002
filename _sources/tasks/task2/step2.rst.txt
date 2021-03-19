@@ -12,7 +12,7 @@ To create it, let's open another terminal (**without closing the one where docke
     [cisco@centos HOLPRG-2002]$ docker exec -it cl_app_1 bash
     root@5109156083d2:/app# 
 
-Once in the application's bash shell, let's create the DJANGO application by issuing the following command:
+Once in the application's bash shell, let's create the Django application by issuing the following command:
 
 .. code-block::
 

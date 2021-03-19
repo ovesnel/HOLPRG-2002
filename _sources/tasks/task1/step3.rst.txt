@@ -1,7 +1,7 @@
 Step 3: Setup Django Project
 ############################
 
-The first thing we need to do is to create a new DJANGO project, in order to do so, we will start a container with Python 3 and install DJANGO library.
+The first thing we need to do is to create a new Django project, in order to do so, we will start a container with Python 3 and install Django library.
 
 The following docker commands will allow you to start a container from **python:3-slim-buster** image and executing a **bash** prompt.
 The `-v` and `-w` switches allow us to map the local folder into the container in the `/app` directory and set the default workspace to `/app`.
@@ -43,11 +43,11 @@ The following is the expected output after executing the command.
     Installing collected packages: sqlparse, pytz, asgiref, django
     Successfully installed asgiref-3.3.1 django-3.1.7 pytz-2021.1 sqlparse-0.4.1
 
-After DJANGO has been installed let's create a DJANGO project called `netprog`
+After Django has been installed let's create a Django project called `netprog`
 
 .. Note ::
 
-    We have decided to call this DJANGO project ``netprog``, if you decide to change the name, keep note of the name since it will need to be changed in other places later.
+    We have decided to call this Django project ``netprog``, if you decide to change the name, keep note of the name since it will need to be changed in other places later.
 
 .. code-block:: bash
 
