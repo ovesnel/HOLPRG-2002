@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Step 1: Split Between Read-Only and Read-Write Interfaces &mdash; HOLPRG-2002  documentation</title>
+  <title>Step 1: Add Enable/Disable Interface Button &mdash; HOLPRG-2002  documentation</title>
   
 
   
@@ -43,7 +43,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Step 2: Add Enable/Disable Button" href="step2.html" />
+    <link rel="next" title="Step 2: Management Interface" href="step2.html" />
     <link rel="prev" title="Task 5: Additional Frontend Logic" href="index.html" /> <link href="../../_static/style.css" rel="stylesheet" type="text/css"> 
 </head>
 
@@ -137,18 +137,10 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Task 5: Additional Frontend Logic</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 1: Split Between Read-Only and Read-Write Interfaces</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sub-title">Sub-Title</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Add Enable/Disable Button</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="step2.html#sub-title">Sub-Title</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="step3.html">Step #3</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="step3.html#sub-title">Sub-Title</a></li>
-</ul>
-</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 1: Add Enable/Disable Interface Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step2.html">Step 2: Management Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step3.html">Step 3: Add Logic To Enable/Disable Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step4.html">Step 4: Add Header And Footer</a></li>
 </ul>
 </li>
 </ul>
@@ -213,7 +205,7 @@
         
           <li><a href="index.html">Task 5: Additional Frontend Logic</a> &raquo;</li>
         
-      <li>Step 1: Split Between Read-Only and Read-Write Interfaces</li>
+      <li>Step 1: Add Enable/Disable Interface Button</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -234,12 +226,53 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="step-1-split-between-read-only-and-read-write-interfaces">
-<h1>Step 1: Split Between Read-Only and Read-Write Interfaces<a class="headerlink" href="#step-1-split-between-read-only-and-read-write-interfaces" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="sub-title">
-<h2>Sub-Title<a class="headerlink" href="#sub-title" title="Permalink to this headline">¶</a></h2>
-<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
+  <div class="section" id="step-1-add-enable-disable-interface-button">
+<h1>Step 1: Add Enable/Disable Interface Button<a class="headerlink" href="#step-1-add-enable-disable-interface-button" title="Permalink to this headline">¶</a></h1>
+<p>We will now add a button to enable/disable the interface.
+Initially our button will not execute any actions in the backend.
+We will later add the code to execute an action when the button is clicked.</p>
+<p>We will begin by adding and extra column in our table that will contain the <span class="guilabel">Enable</span>/<span class="guilabel">Disable</span> button.</p>
+<p>In our <span class="guilabel">interfaces/templates/interfaces/table.html</span> let’s add the column by inserting a <code class="docutils literal notranslate"><span class="pre">&lt;th&gt;</span></code>.
+The following code should be used:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">interfaces/templates/interfaces/table.html</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Description<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;</span>Enabled<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<span class="hll">        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;</span>Action<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+</pre></div>
 </div>
+</div>
+<p>We also have to add another row in our for loop and inside the existing condition for enabled/disabled, we will add an HTML button.
+The button will be different when the interface is <strong>enabled</strong> than when it is <strong>disabled</strong>.</p>
+<p>The following code, shows what needs to be added:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">interfaces/templates/interfaces/table.html</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% for interface in interface_list %}
+<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{ interface.name }}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{ interface.description }}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    {% if interface.enabled %}
+    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;icon-check text-success&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn--small btn--danger&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{ interface.name }}&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;disable&quot;</span><span class="p">&gt;</span>Disable<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span class="hll">    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span>    {% else %}
+    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;icon-close text-danger&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn--small btn--success&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{ interface.name }}&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;enable&quot;</span><span class="p">&gt;</span>Enable<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span class="hll">    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span>    {% endif %}
+<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+{% endfor %}
+</pre></div>
+</div>
+</div>
+<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 
 
@@ -248,7 +281,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="step2.html" class="btn btn-neutral float-right" title="Step 2: Add Enable/Disable Button" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="step2.html" class="btn btn-neutral float-right" title="Step 2: Management Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="index.html" class="btn btn-neutral float-left" title="Task 5: Additional Frontend Logic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
