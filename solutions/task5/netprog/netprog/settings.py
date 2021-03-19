@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "2z9(n_1lka2c8k8-p++(7w7&(4hj=o@zo(#vy*gu%04xeoc396"
+SECRET_KEY = "=$sq(wpn^e_*0frso5hx&x#mw5%&1cll)x3k+m3eo*y0y$ru&#"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -56,9 +56,7 @@ ROOT_URLCONF = "netprog.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [
-            os.path.join(BASE_DIR, "templates"),
-        ],
+        "DIRS": [],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -123,7 +121,3 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-
-DEVICE_HOST = os.getenv("DEVICE_HOST")
-DEVICE_USER = os.getenv("DEVICE_USER")
-DEVICE_PASS = os.getenv("DEVICE_PASS")
