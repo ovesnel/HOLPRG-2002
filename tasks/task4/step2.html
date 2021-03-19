@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Step 2: Add Customizations to Django &mdash; HOLPRG-2002  documentation</title>
+  <title>Step 2: Adjust Django Settings to Serve Static Files &mdash; HOLPRG-2002  documentation</title>
   
 
   
@@ -132,7 +132,7 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Task 4: Apply Cisco UI Styles</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="step1.html">Step 1: Add Static Files for Cisco UI Kit</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 2: Add Customizations to Django</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Step 2: Adjust Django Settings to Serve Static Files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step3.html">Step 3: Apply Customizations to HTML Code</a></li>
 </ul>
 </li>
@@ -141,7 +141,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../task5/step1.html#sub-title">Sub-Title</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../task5/step2.html">Step 2: Add Enbale/Disable Button</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../task5/step2.html">Step 2: Add Enable/Disable Button</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../task5/step2.html#sub-title">Sub-Title</a></li>
 </ul>
 </li>
@@ -213,7 +213,7 @@
         
           <li><a href="index.html">Task 4: Apply Cisco UI Styles</a> &raquo;</li>
         
-      <li>Step 2: Add Customizations to Django</li>
+      <li>Step 2: Adjust Django Settings to Serve Static Files</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -234,9 +234,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="step-2-add-customizations-to-django">
-<h1>Step 2: Add Customizations to Django<a class="headerlink" href="#step-2-add-customizations-to-django" title="Permalink to this headline">¶</a></h1>
-<p>Add an entry at the beginning of <strong>netprog/settings.py</strong> to <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">os</span></code> library</p>
+  <div class="section" id="step-2-adjust-django-settings-to-serve-static-files">
+<h1>Step 2: Adjust Django Settings to Serve Static Files<a class="headerlink" href="#step-2-adjust-django-settings-to-serve-static-files" title="Permalink to this headline">¶</a></h1>
+<p>Add an entry at the beginning of the <code class="docutils literal notranslate"><span class="pre">netprog/settings.py</span></code> file to <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">os</span></code> library:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">netprog/settings.py</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -256,7 +256,7 @@
 </pre></div>
 </div>
 </div>
-<p>Add an entry at the end of <strong>netprog/settings.py</strong> to include <code class="docutils literal notranslate"><span class="pre">STATICFILES_DIRS</span> <span class="pre">=</span> <span class="pre">(os.path.join(BASE_DIR,</span> <span class="pre">&quot;static&quot;),)</span></code></p>
+<p>Add an entry at the end of the <code class="docutils literal notranslate"><span class="pre">netprog/settings.py</span></code> to include <code class="docutils literal notranslate"><span class="pre">STATICFILES_DIRS</span> <span class="pre">=</span> <span class="pre">(os.path.join(BASE_DIR,</span> <span class="pre">&quot;static&quot;),)</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">netprog/settings.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Static files (CSS, JavaScript, Images)</span>

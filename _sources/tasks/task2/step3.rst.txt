@@ -3,10 +3,10 @@
 Step 3: Create Interfaces View
 ##############################
 
-Now that our application is ready, lets create a Django view for it.
+Now that our application is ready, let's create a Django view for it.
 The view, allows us to produce HTML code that will be presented to the user when they open the browser for our project.
 
-Lets start by modifying the ``views.py`` file inside ``interfaces`` and adding the following code:
+Let's start by modifying the ``views.py`` file inside ``interfaces`` and adding the following code:
 
 .. code-block:: python
     :caption: interfaces/views.py

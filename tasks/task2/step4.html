@@ -132,7 +132,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../task4/index.html">Task 4: Apply Cisco UI Styles</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../task4/step1.html">Step 1: Add Static Files for Cisco UI Kit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../task4/step2.html">Step 2: Add Customizations to Django</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../task4/step2.html">Step 2: Adjust Django Settings to Serve Static Files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../task4/step3.html">Step 3: Apply Customizations to HTML Code</a></li>
 </ul>
 </li>
@@ -141,7 +141,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../task5/step1.html#sub-title">Sub-Title</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../task5/step2.html">Step 2: Add Enbale/Disable Button</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../task5/step2.html">Step 2: Add Enable/Disable Button</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../task5/step2.html#sub-title">Sub-Title</a></li>
 </ul>
 </li>
@@ -238,7 +238,7 @@
 <h1>Step 4: Obtain Device’s Information Dynamically<a class="headerlink" href="#step-4-obtain-device-s-information-dynamically" title="Permalink to this headline">¶</a></h1>
 <p>On <a class="reference internal" href="step3.html#t2s3"><span class="std std-ref">Step 3: Create Interfaces View</span></a> we created the interface list manually, in this step we will retrieve the information dynamically from the device using <strong>restconf</strong> and build a list similar to the one we built manually.</p>
 <p>In order to complete this task, we will create a python module that retrieves information via restconf using python <strong>requests</strong> package.</p>
-<p>Lets create a file named <code class="docutils literal notranslate"><span class="pre">device.py</span></code> inside of our <code class="docutils literal notranslate"><span class="pre">interfaces</span></code> application:</p>
+<p>Let’s create a file named <code class="docutils literal notranslate"><span class="pre">device.py</span></code> inside of our <code class="docutils literal notranslate"><span class="pre">interfaces</span></code> application:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">interfaces/device.py</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -310,7 +310,7 @@ warnings.warn<span class="o">(</span>
 <span class="hll"><span class="o">[{</span><span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;GigabitEthernet1&#39;</span>, <span class="s1">&#39;type&#39;</span>: <span class="s1">&#39;iana-if-type:ethernetCsmacd&#39;</span>, <span class="s1">&#39;enabled&#39;</span>: True, <span class="s1">&#39;ietf-ip:ipv4&#39;</span>: <span class="o">{</span><span class="s1">&#39;address&#39;</span>: <span class="o">[{</span><span class="s1">&#39;ip&#39;</span>: <span class="s1">&#39;198.18.134.11&#39;</span>, <span class="s1">&#39;netmask&#39;</span>: <span class="s1">&#39;255.255.192.0&#39;</span><span class="o">}]}</span>, <span class="s1">&#39;ietf-ip:ipv6&#39;</span>: <span class="o">{}}</span>, <span class="o">{</span><span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;GigabitEthernet2&#39;</span>, <span class="s1">&#39;description&#39;</span>: <span class="s1">&#39;This is GigabitEthernet 2&#39;</span>, <span class="s1">&#39;type&#39;</span>: <span class="s1">&#39;iana-if-type:ethernetCsmacd&#39;</span>, <span class="s1">&#39;enabled&#39;</span>: False, <span class="s1">&#39;ietf-ip:ipv4&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;ietf-ip:ipv6&#39;</span>: <span class="o">{}}]</span>
 </span></pre></div>
 </div>
-<p>Update <code class="docutils literal notranslate"><span class="pre">views.py</span></code> to use the fuction to get infomation dinamically.</p>
+<p>Update <code class="docutils literal notranslate"><span class="pre">views.py</span></code> to use the fuction to get interfaces infomation dynamically.</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">interfaces/views.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1

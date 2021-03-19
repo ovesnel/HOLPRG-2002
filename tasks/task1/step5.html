@@ -132,7 +132,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../task4/index.html">Task 4: Apply Cisco UI Styles</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../task4/step1.html">Step 1: Add Static Files for Cisco UI Kit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../task4/step2.html">Step 2: Add Customizations to Django</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../task4/step2.html">Step 2: Adjust Django Settings to Serve Static Files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../task4/step3.html">Step 3: Apply Customizations to HTML Code</a></li>
 </ul>
 </li>
@@ -141,7 +141,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../task5/step1.html#sub-title">Sub-Title</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../task5/step2.html">Step 2: Add Enbale/Disable Button</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../task5/step2.html">Step 2: Add Enable/Disable Button</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../task5/step2.html#sub-title">Sub-Title</a></li>
 </ul>
 </li>
@@ -268,12 +268,11 @@ Successfully built 247a6e234903
 Successfully tagged holprg2002:latest
 </pre></div>
 </div>
-<p>Now that we have a container image with our application, lets run the container with our application with the following command:</p>
+<p>Now that we have a container image with our application, let’s run the container with the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it -u <span class="m">1000</span> --rm -p <span class="m">80</span>:8080 -v <span class="nv">$PWD</span>/netprog:/app -w /app holprg2002
 </pre></div>
 </div>
-<p>After executing the above command you will see the application start and the server will be listening in port 80.
-To stop the application and thus stop the container, press <code class="docutils literal notranslate"><span class="pre">^C</span></code>.</p>
+<p>After executing the above command you will see the application start and the server will be listening in port 80.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[cisco@centos HOLPRG-2002]$ docker run -it -u 1000 --rm -p 80:8080 -v $PWD/netprog:/app -w /app holprg2002
 Watching for file changes with StatReloader
 Performing system checks...
@@ -288,9 +287,9 @@ Starting development server at http://0.0.0.0:8080/
 Quit the server with CONTROL-C.
 </pre></div>
 </div>
-<p>Open your browser and go to <a class="reference external" href="http://localhost">http://localhost</a> and you should see the following page loaded:</p>
+<p>Open your browser and go to <a class="reference external" href="http://localhost">http://localhost</a>. You should see the following page loaded:</p>
 <a class="reference internal image-reference" href="../../_images/django-welcome-page.png"><img alt="../../_images/django-welcome-page.png" class="align-center" src="../../_images/django-welcome-page.png" style="width: 75%;" /></a>
-<p>Lets now stop our server by pressing <code class="docutils literal notranslate"><span class="pre">^C</span></code></p>
+<p>Lets now stop our application and container by pressing <code class="docutils literal notranslate"><span class="pre">^C</span></code>.</p>
 <p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 
