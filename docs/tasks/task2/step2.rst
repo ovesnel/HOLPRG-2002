@@ -3,7 +3,7 @@ Step 2: Create a Django Application
 
 The first thing that needs to be done is to create an application for us to capture the interfaces.
 Each application you write in Django consists of a Python package that follows a certain convention.
-In our case we will call this application ``interfaces``
+In our case we will call this application **interfaces**.
 
 To create it, let's open another terminal (**without closing the one where docker-compose is running**) and execute a shell into the exsiting container:
 
@@ -18,8 +18,8 @@ Once in the application's bash shell, let's create the Django application by iss
 
     ./manage.py startapp interfaces
 
-This will create a directory called ``interfaces`` inside our ``netprog`` directory.
-It will have the proper Django structure.
+This will create the directory :guilabel:`netprog/interfaces` in our host machine, which is mapped to the :guilabel:`/app/interfaces` directory within the container.
+It will have the following Django structure:
 
 .. code-block::
 

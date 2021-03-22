@@ -2,9 +2,9 @@ Step 2: Launch Visual Studio Code
 #################################
 
 For this session we recommend to use Visual Studio Code (VSC) as the Integrated Development Environment (IDE).
-Visual Studio Code is installed in your POD, to open your repo ``HOLPRG-2002``, follow these instructions:
+Visual Studio Code is installed in your POD, to open your repo **HOLPRG-2002**, follow these instructions:
 
-1- From your terminal within repo directory ``HOLPRG-2002`` run the following command:
+1- From your terminal within repo directory :guilabel:`HOLPRG-2002/` run the following command:
 
 .. code-block:: bash
 

@@ -27,7 +27,17 @@ IP Addressing and Access Information
 Connecting to the Lab
 =====================
 
-Option 1
+Option 1 (preferred)
+--------------------
+
+Use the ``Cisco AnyConnect Secure Mobility Client`` to connect through a VPN, information will be provided at the beginning of the session.
+
+.. csv-table::
+   :file: ./reference/access-info.csv
+   :width: 80%
+   :header-rows: 1
+
+Option 2
 --------
 
 Launch the Remote Desktop Client (different versions may use depending on OS) and login into the client with the following credentials:
@@ -39,12 +49,3 @@ Launch the Remote Desktop Client (different versions may use depending on OS) an
 From Remote Desktop you can acccess network devices, Docker, GitHub repo and documentation. In addition you can create your enviroment to start to build your self service portal.
 
 
-Option 2 (optional)
--------------------
-
-Use the ``Cisco AnyConnect Secure Mobility Client`` to connect through a VPN, information will be provided at the beginning of the session.
-
-.. csv-table::
-   :file: ./reference/access-info.csv
-   :width: 80%
-   :header-rows: 1

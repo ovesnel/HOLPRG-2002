@@ -3,9 +3,9 @@ Step 1: Determining Data Structure
 
 The first step is to determine the data structure for the device's interfaces.
 
-In order to do so, we will use **Postman** to connect to the device and obtain information about the interfaces.
+We will use **Postman** to connect to the device and obtain information about the interfaces.
 
-To do so, from the Postman :guilabel:`Import` then select :guilabel:`Folder` and choose the folder :guilabel:`HOLPRG-2002/postman/CL2021-HOLPRG-2002.postman_collection.json` finally :guilabel:`Import` option to import the collection.
+Open **Postman**, click :guilabel:`Import` then select :guilabel:`Folder` tab and choose the folder :guilabel:`HOLPRG-2002/postman/CL2021-HOLPRG-2002.postman_collection.json` finally click the :guilabel:`Import` button to import the collection.
 
 You should see a collection called **CL2021-HOLPRG-2002**, under this collection select the option :guilabel:`GET Interfaces` and click the :guilabel:`Send` button.
 
