@@ -1,7 +1,7 @@
 Step 1: Add Static Files for Cisco UI Kit
 #########################################
 
-Copy the directory named ``static`` at the root of the repository to your netprog directory.
+Copy the directory named :guilabel:`static/` at the root of the repository to your :guilabel:`netprog/` directory.
 When copied, the directory should look like the output of the below command:
 
 .. TODO::

@@ -2,7 +2,7 @@ Step 5: Build and Run Our Application Container
 ###############################################
 
 
-Now that our Dockerfile is ready, we will need to build a Docker image using the Dockerfile, in order to do so execute the following command:
+Now that our Dockerfile is ready, we will need to build a Docker image using the Dockerfile, to do so execute the following command:
 
 .. code-block:: bash
 
@@ -44,7 +44,7 @@ Now that we have a container image with our application, let's run the container
 
    docker run -it -u 1000 --rm -p 80:8080 -v $PWD/netprog:/app -w /app holprg2002
 
-After executing the above command you will see the application start and the server will be listening in port 80.
+After executing the above command you will see the application starts and the server will be listening on port 80 of the host machine.
 
 .. code-block::
 

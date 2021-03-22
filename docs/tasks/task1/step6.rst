@@ -4,7 +4,7 @@ Step 6: Using Docker Compose
 Docker provides utilities to simplify things with the use of Docker compose.
 With Docker compose, we define a YAML file with all the instructions to launch our application and execute just as single command to run it.
 
-Let's create a ``docker-compose.yml`` file in the root of your repository with the instructions on how to run our application:
+Let's create a :guilabel:`docker-compose.yaml` file in the root of your repository with the instructions on how to run our application:
 
 .. literalinclude:: reference/docker-compose.yaml
    :language: YAML

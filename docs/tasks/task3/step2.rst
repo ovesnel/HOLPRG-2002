@@ -1,10 +1,10 @@
 Step 2: Update View To Use The HTML Template
 ############################################
 
-Now let’s update our ``interfaces/views.py`` to use the initial template:
+Now let’s update our :guilabel:`netprog/interfaces/views.py` to use the initial template:
 
 .. literalinclude:: reference/views.py
-    :caption: interfaces/views.py
+    :caption: netprog/interfaces/views.py
     :language: python
     :linenos:
     :emphasize-lines: 2,11-15
