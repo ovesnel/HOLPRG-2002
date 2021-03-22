@@ -1,22 +1,9 @@
 Step 1: Clone Repository
 ########################
 
-To clone the repository follow the instructions below:
+To make a local copy of the Lab repository follow the instructions below:
 
-1- Go to the following URL `HOLPRG-2002 <https://github.com/CiscoLive2021/HOLPRG-2002>`__
-
-2- Copy the repo's URL:
-
-.. image:: images/repo-url.png
-    :width: 75%
-    :align: center
-
-
-.. code-block:: bash
-
-    https://github.com/CiscoLive2021/HOLPRG-2002.git
-
-3- Open a terminal and run the following command:
+1- Open a terminal and run the following command:
 
 .. code-block:: bash
 
@@ -26,7 +13,7 @@ To clone the repository follow the instructions below:
     :width: 75%
     :align: center
 
-4- Move to the local repo directory and verify that the repo has been cloned:
+2- Move to the local repo directory and verify that the repo has been cloned:
 
 .. code-block::
 
@@ -35,8 +22,6 @@ To clone the repository follow the instructions below:
 .. image:: images/terminal-2.png
     :width: 75%
     :align: center
-
-
 
 
 .. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

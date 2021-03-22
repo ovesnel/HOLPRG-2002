@@ -101,8 +101,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../labaccess/index.html">Lab Access</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#ip-addressing-and-access-information">IP Addressing and Access Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#connecting-to-the-lab">Connecting to the Lab</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1">Option 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2-optional">Option 2 (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1-preferred">Option 1 (preferred)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2">Option 2</a></li>
 </ul>
 </li>
 </ul>
@@ -228,8 +228,8 @@
             
   <div class="section" id="step-4-create-dockerfile">
 <h1>Step 4: Create Dockerfile<a class="headerlink" href="#step-4-create-dockerfile" title="Permalink to this headline">¶</a></h1>
-<p>We will now create a <cite>Dockerfile</cite>, this is required in order for us to run our Django application as a container (this ensures that we get the same result independent of the underlying operating system).</p>
-<p>Copy the following code to a file called <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> in the root of our repository.</p>
+<p>We will now create a <cite>Dockerfile</cite>, this is required to run our Django application as a container (this ensures that we get the same result independent of the underlying operating system).</p>
+<p>Copy the following code to a file called <span class="guilabel">Dockerfile</span> in the root of our repository.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Dockerfile</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-Dockerfile notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -266,8 +266,8 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>After our Dockerfile is completed, we will need to create the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> referenced in our Dockerfile.</p>
-<p>Let’s create a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> in the root of our repository, with the following contents:</p>
+<p>After our Dockerfile is completed, we will need to create the <span class="guilabel">requirements.txt</span> file referenced in our Dockerfile.</p>
+<p>Let’s create a <span class="guilabel">requirements.txt</span> in the root of our repository, with the following contents:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">requirements.txt</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -278,7 +278,7 @@
 </div>
 <p>We have specified two requirements, one is Django, the other one which is requests will be needed to query the CSR1000v’s APIs.
 We will included it now to avoid having to rebuild our image later.
-If anything changes in the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file, we will have to rebuild our Docker image.</p>
+If anything changes in the <span class="guilabel">requirements.txt</span> file, we will have to rebuild our Docker image.</p>
 <p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 

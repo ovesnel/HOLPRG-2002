@@ -101,8 +101,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../labaccess/index.html">Lab Access</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#ip-addressing-and-access-information">IP Addressing and Access Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#connecting-to-the-lab">Connecting to the Lab</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1">Option 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2-optional">Option 2 (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1-preferred">Option 1 (preferred)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2">Option 2</a></li>
 </ul>
 </li>
 </ul>
@@ -229,8 +229,8 @@
   <div class="section" id="step-1-determining-data-structure">
 <h1>Step 1: Determining Data Structure<a class="headerlink" href="#step-1-determining-data-structure" title="Permalink to this headline">¶</a></h1>
 <p>The first step is to determine the data structure for the device’s interfaces.</p>
-<p>In order to do so, we will use <strong>Postman</strong> to connect to the device and obtain information about the interfaces.</p>
-<p>To do so, from the Postman <span class="guilabel">Import</span> then select <span class="guilabel">Folder</span> and choose the folder <span class="guilabel">HOLPRG-2002/postman/CL2021-HOLPRG-2002.postman_collection.json</span> finally <span class="guilabel">Import</span> option to import the collection.</p>
+<p>We will use <strong>Postman</strong> to connect to the device and obtain information about the interfaces.</p>
+<p>Open <strong>Postman</strong>, click <span class="guilabel">Import</span> then select <span class="guilabel">Folder</span> tab and choose the folder <span class="guilabel">HOLPRG-2002/postman/CL2021-HOLPRG-2002.postman_collection.json</span> finally click the <span class="guilabel">Import</span> button to import the collection.</p>
 <p>You should see a collection called <strong>CL2021-HOLPRG-2002</strong>, under this collection select the option <span class="guilabel">GET Interfaces</span> and click the <span class="guilabel">Send</span> button.</p>
 <p>From the body of the response we obtain the following structure:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>

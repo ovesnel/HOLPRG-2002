@@ -101,8 +101,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../labaccess/index.html">Lab Access</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#ip-addressing-and-access-information">IP Addressing and Access Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#connecting-to-the-lab">Connecting to the Lab</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1">Option 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2-optional">Option 2 (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1-preferred">Option 1 (preferred)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2">Option 2</a></li>
 </ul>
 </li>
 </ul>
@@ -229,7 +229,7 @@
   <div class="section" id="step-3-apply-customizations-to-html-code">
 <h1>Step 3: Apply Customizations to HTML Code<a class="headerlink" href="#step-3-apply-customizations-to-html-code" title="Permalink to this headline">¶</a></h1>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">interfaces/templates/interfaces/table.html</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">netprog/interfaces/templates/interfaces/table.html</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-html notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -278,9 +278,9 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>Create the following <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file in the <code class="docutils literal notranslate"><span class="pre">interfaces/templates/interfaces/</span></code> directory:</p>
+<p>Create the following <span class="guilabel">index.html</span> file in the <span class="guilabel">netprog/interfaces/templates/interfaces/</span> directory:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">interfaces/templates/interfaces/index.html</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">netprog/interfaces/templates/interfaces/index.html</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-html notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -353,7 +353,7 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>Change the interfaces application views to read the template from <code class="docutils literal notranslate"><span class="pre">index.html</span></code> instead of <code class="docutils literal notranslate"><span class="pre">table.html</span></code>:</p>
+<p>Change the interfaces application views to read the template from <span class="guilabel">index.html</span> instead of <span class="guilabel">table.html</span>:</p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">interfaces/views.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1

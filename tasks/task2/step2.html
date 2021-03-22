@@ -101,8 +101,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../labaccess/index.html">Lab Access</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#ip-addressing-and-access-information">IP Addressing and Access Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#connecting-to-the-lab">Connecting to the Lab</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1">Option 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2-optional">Option 2 (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1-preferred">Option 1 (preferred)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2">Option 2</a></li>
 </ul>
 </li>
 </ul>
@@ -230,7 +230,7 @@
 <h1>Step 2: Create a Django Application<a class="headerlink" href="#step-2-create-a-django-application" title="Permalink to this headline">¶</a></h1>
 <p>The first thing that needs to be done is to create an application for us to capture the interfaces.
 Each application you write in Django consists of a Python package that follows a certain convention.
-In our case we will call this application <code class="docutils literal notranslate"><span class="pre">interfaces</span></code></p>
+In our case we will call this application <strong>interfaces</strong>.</p>
 <p>To create it, let’s open another terminal (<strong>without closing the one where docker-compose is running</strong>) and execute a shell into the exsiting container:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[cisco@centos HOLPRG-2002]$ docker exec -it cl_app_1 bash
 root@5109156083d2:/app#
@@ -240,8 +240,8 @@ root@5109156083d2:/app#
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="n">interfaces</span>
 </pre></div>
 </div>
-<p>This will create a directory called <code class="docutils literal notranslate"><span class="pre">interfaces</span></code> inside our <code class="docutils literal notranslate"><span class="pre">netprog</span></code> directory.
-It will have the proper Django structure.</p>
+<p>This will create the directory <span class="guilabel">netprog/interfaces</span> in our host machine, which is mapped to the <span class="guilabel">/app/interfaces</span> directory within the container.
+It will have the following Django structure:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="o">@</span><span class="mi">5109156083</span><span class="n">d2</span><span class="p">:</span><span class="o">/</span><span class="n">app</span><span class="c1"># ls -la interfaces/</span>
 <span class="n">total</span> <span class="mi">24</span>
 <span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">.</span> <span class="mi">3</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="o">.</span>

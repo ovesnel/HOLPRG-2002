@@ -101,8 +101,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../labaccess/index.html">Lab Access</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#ip-addressing-and-access-information">IP Addressing and Access Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#connecting-to-the-lab">Connecting to the Lab</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1">Option 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2-optional">Option 2 (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1-preferred">Option 1 (preferred)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2">Option 2</a></li>
 </ul>
 </li>
 </ul>
@@ -228,7 +228,7 @@
             
   <div class="section" id="step-2-adjust-django-settings-to-serve-static-files">
 <h1>Step 2: Adjust Django Settings to Serve Static Files<a class="headerlink" href="#step-2-adjust-django-settings-to-serve-static-files" title="Permalink to this headline">¶</a></h1>
-<p>Add an entry at the beginning of the <code class="docutils literal notranslate"><span class="pre">netprog/settings.py</span></code> file to <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">os</span></code> library:</p>
+<p>Add an entry at the beginning of the <span class="guilabel">netprog/netprog/settings.py</span> file to <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">os</span></code> library:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">netprog/settings.py</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -248,7 +248,7 @@
 </pre></div>
 </div>
 </div>
-<p>Add an entry at the end of the <code class="docutils literal notranslate"><span class="pre">netprog/settings.py</span></code> to include <code class="docutils literal notranslate"><span class="pre">STATICFILES_DIRS</span> <span class="pre">=</span> <span class="pre">(os.path.join(BASE_DIR,</span> <span class="pre">&quot;static&quot;),)</span></code>:</p>
+<p>Add an entry at the end of the <span class="guilabel">netprog/netprog/settings.py</span> to include <code class="docutils literal notranslate"><span class="pre">STATICFILES_DIRS</span> <span class="pre">=</span> <span class="pre">(os.path.join(BASE_DIR,</span> <span class="pre">&quot;static&quot;),)</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">netprog/settings.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Static files (CSS, JavaScript, Images)</span>

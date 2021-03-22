@@ -3,17 +3,17 @@ Step 4: Obtain Device's Information Dynamically
 
 On :ref:`t2s3` we created the interface list manually, in this step we will retrieve the information dynamically from the device using **restconf** and build a list similar to the one we built manually.
 
-In order to complete this task, we will create a python module that retrieves information via restconf using python **requests** package.
+To complete this task, we will create a python module that retrieves information via restconf using python **requests** package.
 
-Let's create a file named ``device.py`` inside of our ``interfaces`` application:
+Let's create a file named :guilabel:`device.py` inside of our :guilabel:`netprog/interfaces` application directory:
 
 .. literalinclude:: reference/device.py
-    :caption: interfaces/device.py
+    :caption: netprog/interfaces/device.py
     :language: python
     :linenos:
 
 
-We can now run this module to test that we can fetch interfaces information from the device using **restconf**:
+We can now run this module within the container to test that we can fetch interfaces information from the device using **restconf**:
 
 .. code-block:: bash
 
@@ -30,10 +30,10 @@ You should get an output similar to the one shown below with the interfaces info
     [{'name': 'GigabitEthernet1', 'type': 'iana-if-type:ethernetCsmacd', 'enabled': True, 'ietf-ip:ipv4': {'address': [{'ip': '198.18.134.11', 'netmask': '255.255.192.0'}]}, 'ietf-ip:ipv6': {}}, {'name': 'GigabitEthernet2', 'description': 'This is GigabitEthernet 2', 'type': 'iana-if-type:ethernetCsmacd', 'enabled': False, 'ietf-ip:ipv4': {}, 'ietf-ip:ipv6': {}}]
 
 
-Update ``views.py`` to use the fuction to get interfaces infomation dynamically.
+Update :guilabel:`views.py` to use the fuction to get interfaces infomation dynamically.
 
 .. literalinclude:: reference/views.py
-    :caption: interfaces/views.py
+    :caption: netprog/interfaces/views.py
     :language: python
     :linenos:
     :emphasize-lines: 4,10

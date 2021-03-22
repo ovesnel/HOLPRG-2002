@@ -6,10 +6,10 @@ Step 3: Create Interfaces View
 Now that our application is ready, let's create a Django view for it.
 The view, allows us to produce HTML code that will be presented to the user when they open the browser for our project.
 
-Let's start by modifying the ``views.py`` file inside ``interfaces`` and adding the following code:
+Let's start by modifying the :guilabel:`netprog/interfaces/views.py` file and adding the following code:
 
 .. code-block:: python
-    :caption: interfaces/views.py
+    :caption: netprog/interfaces/views.py
     :linenos:
     :emphasize-lines: 2,7-20
 
@@ -34,10 +34,10 @@ Let's start by modifying the ``views.py`` file inside ``interfaces`` and adding 
         ]
         return HttpResponse(str(interface_list))
 
-In order for us to display this view, we need to add a function view in ``urls.py`` at the project ``netprog`` level:
+To render this view, we need to add a function view in :guilabel:`netprog/netprog/urls.py`:
 
 .. code-block:: python
-    :caption: netprog/urls.py
+    :caption: netprog/netprog/urls.py
     :linenos:
     :emphasize-lines: 19,22
 

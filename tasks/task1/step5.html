@@ -101,8 +101,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../labaccess/index.html">Lab Access</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#ip-addressing-and-access-information">IP Addressing and Access Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../labaccess/index.html#connecting-to-the-lab">Connecting to the Lab</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1">Option 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2-optional">Option 2 (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-1-preferred">Option 1 (preferred)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../labaccess/index.html#option-2">Option 2</a></li>
 </ul>
 </li>
 </ul>
@@ -228,7 +228,7 @@
             
   <div class="section" id="step-5-build-and-run-our-application-container">
 <h1>Step 5: Build and Run Our Application Container<a class="headerlink" href="#step-5-build-and-run-our-application-container" title="Permalink to this headline">¶</a></h1>
-<p>Now that our Dockerfile is ready, we will need to build a Docker image using the Dockerfile, in order to do so execute the following command:</p>
+<p>Now that our Dockerfile is ready, we will need to build a Docker image using the Dockerfile, to do so execute the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker build . -t holprg2002
 </pre></div>
 </div>
@@ -264,7 +264,7 @@ Successfully tagged holprg2002:latest
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it -u <span class="m">1000</span> --rm -p <span class="m">80</span>:8080 -v <span class="nv">$PWD</span>/netprog:/app -w /app holprg2002
 </pre></div>
 </div>
-<p>After executing the above command you will see the application start and the server will be listening in port 80.</p>
+<p>After executing the above command you will see the application starts and the server will be listening on port 80 of the host machine.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[cisco@centos HOLPRG-2002]$ docker run -it -u 1000 --rm -p 80:8080 -v $PWD/netprog:/app -w /app holprg2002
 Watching for file changes with StatReloader
 Performing system checks...
