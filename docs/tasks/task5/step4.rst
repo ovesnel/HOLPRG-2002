@@ -3,7 +3,7 @@ Step 4: Add Header And Footer
 
 For our website to look even better, we will add the standard Cisco header and footer to our HTML templates.
 
-the first step is to create files for our header and footer
+The first step is to create files for our header and footer:
 
 .. literalinclude:: reference/header.html
     :caption: interfaces/templates/interfaces/header.html
@@ -15,7 +15,7 @@ the first step is to create files for our header and footer
     :language: html
     :linenos:
 
-We will now include it in our index.html
+We will now include it in our :guilabel:`index.html`
 
 .. literalinclude:: reference/index.html
     :caption: interfaces/templates/interfaces/index.html
