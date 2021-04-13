@@ -61,13 +61,17 @@ After executing the above command you will see the application starts and the se
    Starting development server at http://0.0.0.0:8080/
    Quit the server with CONTROL-C.
 
+.. note::
+
+   Disregard the message about unapplied migrations, it is not needed for our project.
+
 Open your browser and go to http://localhost. You should see the following page loaded:
 
 .. image:: images/django-welcome-page.png
     :width: 75%
     :align: center
 
-Lets now stop our application and container by pressing :kbd:`ctrl` + :kbd:`C`.
+Let's now stop our application and container by pressing :kbd:`ctrl` + :kbd:`C` in the terminal window.
 
 
-.. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
+.. sectionauthor:: Ali Eftekhari <aleftekh@cisco.com>, Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
