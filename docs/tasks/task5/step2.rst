@@ -4,8 +4,7 @@ Step 2: Management Interface
 When building our UI logic, we need to consider a special case for our management interface.
 We do not want the users to be able to disable this interface.
 
-To accomplish this, we will add logic again using Django template language.z
-To exclude that interface from displaying an :guilabel:`Enable`/:guilabel:`Disable` button.
+To accomplish this, we will add logic again using the Django template language to exclude that interface from displaying an :guilabel:`Enable`/:guilabel:`Disable` button.
 
 To simplify the logic inside our HTML code, we will add another ``if`` statement in our Django template to include a different HTML file for the interface depending on the interface name.
 
