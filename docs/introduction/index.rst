@@ -20,4 +20,4 @@ Prerequisites
 - Basic Linux commands
 - Basic GitHub experience 
 - Basic Docker experience
-- Have cisco any connect installed (optional)
+- Have Cisco AnyConnect® installed (preferred but not mandatory)
