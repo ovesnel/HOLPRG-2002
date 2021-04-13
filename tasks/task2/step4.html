@@ -212,7 +212,7 @@
         
           
             
-              <a href="https://https://github.com//CiscsoLive2021/HOLPRG-2002/blob/master/docs/tasks/task2/step4.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/CiscoLive2021/HOLPRG-2002/blob/master/docs/tasks/task2/step4.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -231,8 +231,8 @@
 <p>On <a class="reference internal" href="step3.html#t2s3"><span class="std std-ref">Step 3: Create Interfaces View</span></a> we created the interface list manually, in this step we will retrieve the information dynamically from the device using <strong>restconf</strong> and build a list similar to the one we built manually.</p>
 <p>To complete this task, we will create a python module that retrieves information via restconf using python <strong>requests</strong> package.</p>
 <p>Let’s create a file named <span class="guilabel">device.py</span> inside of our <span class="guilabel">netprog/interfaces</span> application directory:</p>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">netprog/interfaces/device.py</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">netprog/interfaces/device.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -303,8 +303,8 @@ warnings.warn<span class="o">(</span>
 </span></pre></div>
 </div>
 <p>Update <span class="guilabel">views.py</span> to use the fuction to get interfaces infomation dynamically.</p>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">netprog/interfaces/views.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">netprog/interfaces/views.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -329,9 +329,13 @@ warnings.warn<span class="o">(</span>
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>Go back to your browser and refresh the page.
+<p>Go back to your browser and refresh the <a class="reference external" href="http://localhost">http://localhost</a> web page.
 You should see the interfaces information in <strong>JSON</strong> format.</p>
-<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Add image for refreshed web page</p>
+</div>
+<p><em>Section author: Ali Eftekhari &lt;<a class="reference external" href="mailto:aleftekh&#37;&#52;&#48;cisco&#46;com">aleftekh<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 
 

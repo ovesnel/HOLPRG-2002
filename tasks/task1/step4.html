@@ -212,7 +212,7 @@
         
           
             
-              <a href="https://https://github.com//CiscsoLive2021/HOLPRG-2002/blob/master/docs/tasks/task1/step4.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/CiscoLive2021/HOLPRG-2002/blob/master/docs/tasks/task1/step4.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -229,7 +229,7 @@
   <div class="section" id="step-4-create-dockerfile">
 <h1>Step 4: Create Dockerfile<a class="headerlink" href="#step-4-create-dockerfile" title="Permalink to this headline">¶</a></h1>
 <p>We will now create a <cite>Dockerfile</cite>, this is required to run our Django application as a container (this ensures that we get the same result independent of the underlying operating system).</p>
-<p>Copy the following code to a file called <span class="guilabel">Dockerfile</span> in the root of our repository.</p>
+<p>Copy the following code to a file called <span class="guilabel">Dockerfile</span> in the root (<span class="guilabel">~/HOLPRG-2002/</span>) of our repository.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Dockerfile</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-Dockerfile notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -266,6 +266,10 @@
 </pre></div>
 </td></tr></table></div>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>VSCode might prompt you to install an extension for Docker, you can choose to ignore this.</p>
+</div>
 <p>After our Dockerfile is completed, we will need to create the <span class="guilabel">requirements.txt</span> file referenced in our Dockerfile.</p>
 <p>Let’s create a <span class="guilabel">requirements.txt</span> in the root of our repository, with the following contents:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
@@ -276,10 +280,10 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>We have specified two requirements, one is Django, the other one which is requests will be needed to query the CSR1000v’s APIs.
-We will included it now to avoid having to rebuild our image later.
-If anything changes in the <span class="guilabel">requirements.txt</span> file, we will have to rebuild our Docker image.</p>
-<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
+<p>We have specified two requirements, one is <code class="docutils literal notranslate"><span class="pre">Django</span></code>, the other one is <code class="docutils literal notranslate"><span class="pre">requests</span></code> which will be needed to query the CSR1000v’s APIs.
+We have included it now to avoid having to rebuild our image later.</p>
+<p>If anything changes in the <span class="guilabel">requirements.txt</span> file, we will have to rebuild our Docker image.</p>
+<p><em>Section author: Ali Eftekhari &lt;<a class="reference external" href="mailto:aleftekh&#37;&#52;&#48;cisco&#46;com">aleftekh<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 
 

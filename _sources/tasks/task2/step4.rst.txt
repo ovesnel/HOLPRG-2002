@@ -38,7 +38,10 @@ Update :guilabel:`views.py` to use the fuction to get interfaces infomation dyna
     :linenos:
     :emphasize-lines: 4,10
 
-Go back to your browser and refresh the page.
+Go back to your browser and refresh the http://localhost web page.
 You should see the interfaces information in **JSON** format.
 
-.. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
+.. TODO:: 
+    Add image for refreshed web page
+
+.. sectionauthor:: Ali Eftekhari <aleftekh@cisco.com>, Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

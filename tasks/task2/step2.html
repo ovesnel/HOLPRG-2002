@@ -212,7 +212,7 @@
         
           
             
-              <a href="https://https://github.com//CiscsoLive2021/HOLPRG-2002/blob/master/docs/tasks/task2/step2.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/CiscoLive2021/HOLPRG-2002/blob/master/docs/tasks/task2/step2.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -232,8 +232,12 @@
 Each application you write in Django consists of a Python package that follows a certain convention.
 In our case we will call this application <strong>interfaces</strong>.</p>
 <p>To create it, let’s open another terminal (<strong>without closing the one where docker-compose is running</strong>) and execute a shell into the exsiting container:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker <span class="nb">exec</span> -it cl_app_1 bash
+</pre></div>
+</div>
+<p>The output should be similar to this one.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[cisco@centos HOLPRG-2002]$ docker exec -it cl_app_1 bash
-root@5109156083d2:/app#
+I have no name!@5109156083d2:/app#
 </pre></div>
 </div>
 <p>Once in the application’s bash shell, let’s create the Django application by issuing the following command:</p>
@@ -242,20 +246,20 @@ root@5109156083d2:/app#
 </div>
 <p>This will create the directory <span class="guilabel">netprog/interfaces</span> in our host machine, which is mapped to the <span class="guilabel">/app/interfaces</span> directory within the container.
 It will have the following Django structure:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="o">@</span><span class="mi">5109156083</span><span class="n">d2</span><span class="p">:</span><span class="o">/</span><span class="n">app</span><span class="c1"># ls -la interfaces/</span>
-<span class="n">total</span> <span class="mi">24</span>
-<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">.</span> <span class="mi">3</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="o">.</span>
-<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">.</span> <span class="mi">4</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">70</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="o">..</span>
-<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
-<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">63</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="n">admin</span><span class="o">.</span><span class="n">py</span>
-<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">95</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="n">apps</span><span class="o">.</span><span class="n">py</span>
-<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">.</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">24</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="n">migrations</span>
-<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">57</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="n">models</span><span class="o">.</span><span class="n">py</span>
-<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">60</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="n">tests</span><span class="o">.</span><span class="n">py</span>
-<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">63</span> <span class="n">Mar</span> <span class="mi">17</span> <span class="mi">21</span><span class="p">:</span><span class="mi">12</span> <span class="n">views</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>I have no name!@5109156083d2:/app# ls -la interfaces/
+total 24
+drwxr-xr-x. 3 root root 4096 Mar 17 21:12 .
+drwxr-xr-x. 4 root root   70 Mar 17 21:12 ..
+-rw-r--r--. 1 1000 root    0 Mar 17 21:12 __init__.py
+-rw-r--r--. 1 1000 root   63 Mar 17 21:12 admin.py
+-rw-r--r--. 1 1000 root   95 Mar 17 21:12 apps.py
+drwxr-xr-x. 2 1000 root   24 Mar 17 21:12 migrations
+-rw-r--r--. 1 1000 root   57 Mar 17 21:12 models.py
+-rw-r--r--. 1 1000 root   60 Mar 17 21:12 tests.py
+-rw-r--r--. 1 1000 root   63 Mar 17 21:12 views.py
 </pre></div>
 </div>
-<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
+<p><em>Section author: Ali Eftekhari &lt;<a class="reference external" href="mailto:aleftekh&#37;&#52;&#48;cisco&#46;com">aleftekh<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 
 

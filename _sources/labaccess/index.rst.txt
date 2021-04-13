@@ -2,7 +2,7 @@
 Lab Access
 ##########
 
-In this lab, you will have access to one (1) Linux VM. The Linux VM is configured to provide access to Docker and execute the scripts need during the Lab.
+In this lab, you will have access to one (1) Linux VM. The Linux VM is configured to provide access to Docker and execute the scripts needed during the Lab.
 
 The lab topology is shown as below:
 
@@ -39,3 +39,5 @@ Launch the Remote Desktop Client (different versions may use depending on OS) an
 
 
 From Remote Desktop you can acccess network devices, Docker, GitHub repo and documentation. In addition you can create your enviroment to start to build your self service portal.
+
+.. sectionauthor:: Ali Eftekhari <aleftekh@cisco.com>, Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
