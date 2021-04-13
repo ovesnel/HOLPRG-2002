@@ -1,7 +1,7 @@
 Step 3: Add Logic To Enable/Disable Button
 ##########################################
 
-the first step is to wrap our table into an HTML form:
+The first step is to wrap our table into an HTML form:
 
 .. literalinclude:: reference/table.html
     :caption: interfaces/templates/interfaces/table.html
