@@ -19,23 +19,15 @@ IP Addressing and Access Information
    :header-rows: 1
 
 
-.. Note ::
-
-    Some information such as ``usernames`` and ``passwords`` may change, if so, it will be delivered to the attendees just at the beginning of the session.
-
-
 Connecting to the Lab
 =====================
+
+Start your session by opening the following `link <https://dcloud.cisco.com/expo/b3gi3rj4fngbp2k39h3o55mlm>`__
 
 Option 1 (preferred)
 --------------------
 
-Use the ``Cisco AnyConnect Secure Mobility Client`` to connect through a VPN, information will be provided at the beginning of the session.
-
-.. csv-table::
-   :file: ./reference/access-info.csv
-   :width: 80%
-   :header-rows: 1
+Use the ``Cisco AnyConnect Secure Mobility Client`` to connect through a VPN, information will be provided after registering via above link.
 
 Option 2
 --------
@@ -47,5 +39,3 @@ Launch the Remote Desktop Client (different versions may use depending on OS) an
 
 
 From Remote Desktop you can acccess network devices, Docker, GitHub repo and documentation. In addition you can create your enviroment to start to build your self service portal.
-
-
