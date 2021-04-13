@@ -12,6 +12,10 @@ From Visual Studio Code's terminal execute the following command:
 
     docker run -it -u 1000 --rm -v $PWD:/app -w /app python:3-slim-buster bash
 
+.. note::
+
+    Do not be surprised if you get a prompt that says `I have no name!`.
+    This is due to us using UID 1000 which belongs to your ``cisco`` user, but does not exist inside the container. 
 
 Once we have a bash prompt inside the container, let's install django using Python's package manager.
 To accomplish this, we will first create a virtual environment and activate it.
@@ -43,6 +47,17 @@ The following is the expected output after executing the command.
     Installing collected packages: sqlparse, pytz, asgiref, django
     Successfully installed asgiref-3.3.1 django-3.1.7 pytz-2021.1 sqlparse-0.4.1
 
+.. tip::
+
+    You might receive a warning from VSCode similar to this one:
+
+    .. image:: images/vscode-too-many-files-changed.png
+        :width: 25%
+
+
+    This is expected.
+    Press the `x` to dismiss the warning.
+
 After Django has been installed let's create a Django project called **netprog**:
 
 .. Note ::
@@ -53,11 +68,11 @@ After Django has been installed let's create a Django project called **netprog**
 
     django-admin startproject netprog
 
-We can now safely exit the container.
+We can now safely exit the container, use the ``exit`` command to accomplish the task.
 
 .. code-block:: bash
 
-   root@5109156083d2:/app# exit
+    exit
 
+.. sectionauthor:: Ali Eftekhari <aleftekh@cisco.com>, Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
 
-.. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

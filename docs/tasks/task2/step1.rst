@@ -5,7 +5,7 @@ The first step is to determine the data structure for the device's interfaces.
 
 We will use **Postman** to connect to the device and obtain information about the interfaces.
 
-Open **Postman**, click :guilabel:`Import` then select :guilabel:`Folder` tab and choose the folder :guilabel:`HOLPRG-2002/postman/CL2021-HOLPRG-2002.postman_collection.json` finally click the :guilabel:`Import` button to import the collection.
+Open **Postman**, click :guilabel:`Import` then select :guilabel:`Folder` tab and choose the folder :guilabel:`HOLPRG-2002/postman/` finally click the :guilabel:`Import` button to import the collection.
 
 You should see a collection called **CL2021-HOLPRG-2002**, under this collection select the option :guilabel:`GET Interfaces` and click the :guilabel:`Send` button.
 
@@ -48,4 +48,4 @@ From the above output, we have an array of interfaces with the following relevan
 - enabled
 
 
-.. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
+.. sectionauthor:: Ali Eftekhari <aleftekh@cisco.com>, Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
