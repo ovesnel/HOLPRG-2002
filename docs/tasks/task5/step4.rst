@@ -15,7 +15,7 @@ The first step is to create files for our header and footer:
     :language: html
     :linenos:
 
-We will now include it in our :guilabel:`index.html`
+We will now include it in the :guilabel:`index.html`
 
 .. literalinclude:: reference/index.html
     :caption: interfaces/templates/interfaces/index.html
@@ -23,5 +23,6 @@ We will now include it in our :guilabel:`index.html`
     :linenos:
     :emphasize-lines: 12,30
 
+Go back to your browser and refresh the http://localhost web page.
 
-.. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
+.. sectionauthor:: Ali Eftekhari <aleftekh@cisco.com>, Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

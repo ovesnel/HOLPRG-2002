@@ -22,5 +22,6 @@ Change the interfaces application views to read the template from :guilabel:`ind
     :linenos:
     :emphasize-lines: 11
 
+Go back to your browser and refresh the http://localhost web page.
 
-.. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
+.. sectionauthor:: Ali Eftekhari <aleftekh@cisco.com>, Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>

@@ -9,10 +9,10 @@ Now let’s update our :guilabel:`netprog/interfaces/views.py` to use the initia
     :linenos:
     :emphasize-lines: 2,11-15
 
-Head back to your browser and refresh the page.
+Go back to your browser and refresh the http://localhost web page.
 You should now see the device's interfaces in the form of an HTML table.
 
 .. image:: images/interfaces-table-view.png
     :align: center
 
-.. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
+.. sectionauthor:: Ali Eftekhari <aleftekh@cisco.com>, Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
