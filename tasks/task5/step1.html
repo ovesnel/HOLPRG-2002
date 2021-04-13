@@ -232,18 +232,16 @@
 Initially our button will not execute any actions in the backend.
 We will later add the code to execute an action when the button is clicked.</p>
 <p>We will begin by adding and extra column in our table that will contain the <span class="guilabel">Enable</span>/<span class="guilabel">Disable</span> button.</p>
-<p>In our <span class="guilabel">interfaces/templates/interfaces/table.html</span> let’s add the column by inserting a <code class="docutils literal notranslate"><span class="pre">&lt;th&gt;</span></code>.
+<p>In our <span class="guilabel">interfaces/templates/interfaces/table.html</span> let’s add the column by inserting another <code class="docutils literal notranslate"><span class="pre">&lt;th&gt;</span></code>.
 The following code should be used:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">interfaces/templates/interfaces/table.html</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Description<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;</span>Enabled<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<span class="hll">        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;</span>Action<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Description<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;</span>Enabled<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">th</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;</span>Action<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span><span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -272,7 +270,7 @@ The button will be different when the interface is <strong>enabled</strong> than
 </pre></div>
 </div>
 </div>
-<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
+<p><em>Section author: Ali Eftekhari &lt;<a class="reference external" href="mailto:aleftekh&#37;&#52;&#48;cisco&#46;com">aleftekh<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 
 

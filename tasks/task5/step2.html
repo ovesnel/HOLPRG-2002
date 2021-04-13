@@ -232,7 +232,7 @@
 We do not want the users to be able to disable this interface.</p>
 <p>To accomplish this, we will add logic again using the Django template language to exclude that interface from displaying an <span class="guilabel">Enable</span>/<span class="guilabel">Disable</span> button.</p>
 <p>To simplify the logic inside our HTML code, we will add another <code class="docutils literal notranslate"><span class="pre">if</span></code> statement in our Django template to include a different HTML file for the interface depending on the interface name.</p>
-<p>Let’s first extract our existing logic for the <code class="docutils literal notranslate"><span class="pre">&lt;tr&gt;</span></code> (table’s interface row) to a separate file named <span class="guilabel">interface.html</span></p>
+<p>Let’s first extract our existing logic for the <code class="docutils literal notranslate"><span class="pre">&lt;tr&gt;</span></code> (table’s interface row) to a separate file named <span class="guilabel">interface.html</span> in the <span class="guilabel">interfaces/templates/interfaces/</span> directory.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">interfaces/templates/interfaces/interface.html</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-html notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -312,7 +312,7 @@ We do not want the users to be able to disable this interface.</p>
 <p>If we refresh our website, it will now look like this:</p>
 <img alt="../../_images/interface-table-no-action.png" class="align-center" src="../../_images/interface-table-no-action.png" />
 <p>Pressing the <span class="guilabel">Enable</span>/<span class="guilabel">Disable</span> button will have no effect, we will add the logic for that in our next step.</p>
-<p><em>Section author: Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
+<p><em>Section author: Ali Eftekhari &lt;<a class="reference external" href="mailto:aleftekh&#37;&#52;&#48;cisco&#46;com">aleftekh<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Luis Rueda &lt;<a class="reference external" href="mailto:lurueda&#37;&#52;&#48;cisco&#46;com">lurueda<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Jairo Leon &lt;<a class="reference external" href="mailto:jaileon&#37;&#52;&#48;cisco&#46;com">jaileon<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;, Ovesnel Mas Lara &lt;<a class="reference external" href="mailto:omaslara&#37;&#52;&#48;cisco&#46;com">omaslara<span>&#64;</span>cisco<span>&#46;</span>com</a>&gt;</em></p>
 </div>
 
 

@@ -8,7 +8,7 @@ To accomplish this, we will add logic again using the Django template language t
 
 To simplify the logic inside our HTML code, we will add another ``if`` statement in our Django template to include a different HTML file for the interface depending on the interface name.
 
-Let's first extract our existing logic for the ``<tr>`` (table's interface row) to a separate file named :guilabel:`interface.html`
+Let's first extract our existing logic for the ``<tr>`` (table's interface row) to a separate file named :guilabel:`interface.html` in the :guilabel:`interfaces/templates/interfaces/` directory.
 
 .. literalinclude:: reference/interface.html
     :caption: interfaces/templates/interfaces/interface.html
@@ -47,4 +47,4 @@ If we refresh our website, it will now look like this:
 
 Pressing the :guilabel:`Enable`/:guilabel:`Disable` button will have no effect, we will add the logic for that in our next step.
 
-.. sectionauthor:: Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
+.. sectionauthor:: Ali Eftekhari <aleftekh@cisco.com>, Luis Rueda <lurueda@cisco.com>, Jairo Leon <jaileon@cisco.com>, Ovesnel Mas Lara <omaslara@cisco.com>
