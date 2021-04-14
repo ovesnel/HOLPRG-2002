@@ -5,7 +5,7 @@ def get_interfaces(hostname="198.18.134.11", username="cisco", password="cisco")
     interfaces = []
     url = f"https://{hostname}/restconf/data/ietf-interfaces:interfaces/interface"
 
-    headers = headers = {"Accept": "application/yang-data+json"}
+    headers = {"Accept": "application/yang-data+json"}
     try:
         response = requests.request(
             "GET",
